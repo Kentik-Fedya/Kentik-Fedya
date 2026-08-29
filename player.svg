@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eq-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4cd964"/>
+      <stop offset="50%" stop-color="#34aadc"/>
+      <stop offset="100%" stop-color="#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="cover-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6feb"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <style>
+      .bg { fill: #000000; stroke: #1c1c1e; stroke-width: 2px; }
+      .hdr { fill: #050505; }
+      .font-mono { font-family: 'SF Mono', 'Monaco', 'Courier New', monospace; font-size: 13px; }
+      .title { fill: #666; font-size: 12px; font-weight: 600; font-family: -apple-system, sans-serif; letter-spacing: 0.8px; }
+      
+      .green { fill: #4cd964; font-weight: 600; }
+      .cyan { fill: #34aadc; font-weight: 600; }
+      .white { fill: #ffffff; }
+      .gray { fill: #666666; font-size: 11px; }
+      
+      /* Анимация прыгающего эквалайзера */
+      .eq-bar { fill: url(#eq-grad); rx: 2px; }
+      .eq1 { animation: eqAnim 1.2s infinite ease-in-out; }
+      .eq2 { animation: eqAnim 0.8s infinite ease-in-out 0.2s; }
+      .eq3 { animation: eqAnim 1.5s infinite ease-in-out 0.4s; }
+      .eq4 { animation: eqAnim 0.9s infinite ease-in-out 0.1s; }
+      .eq5 { animation: eqAnim 1.3s infinite ease-in-out 0.5s; }
+      .eq6 { animation: eqAnim 1.0s infinite ease-in-out 0.3s; }
+      
+      @keyframes eqAnim {
+        0%, 100% { height: 6px; y: 434px; }
+        50% { height: 34px; y: 406px; }
+      }
+    </style>
+  </defs>
+
+  <!-- Окно 500x500 -->
+  <rect width="100%" height="100%" rx="14" class="bg"/>
+  <path d="M 1 12 Q 1 1 12 1 L 488 1 Q 499 1 499 12 L 499 35 L 1 35 Z" class="hdr"/>
+  <line x1="1" y1="35" x2="499" y2="35" stroke="#151515" stroke-width="1.5"/>
+
+  <!-- Кнопки macOS -->
+  <circle cx="25" cy="18" r="5" fill="#ff5f56"/>
+  <circle cx="43" cy="18" r="5" fill="#ffbd2e"/>
+  <circle cx="61" cy="18" r="5" fill="#27c93f"/>
+  <text x="250" y="22" text-anchor="middle" class="title">music // now playing</text>
+
+  <g class="font-mono">
+    <!-- Обложка альбома -->
+    <g transform="translate(180, 60)">
+      <rect width="140" height="140" rx="16" fill="url(#cover-grad)" stroke="#222222" stroke-width="1.5"/>
+      <circle cx="70" cy="70" r="30" fill="#000000" opacity="0.6"/>
+      <text x="70" y="78" font-size="24" text-anchor="middle" fill="#ffffff">🎧</text>
+    </g>
+
+    <!-- Главный хит Дрейка -->
+    <text x="250" y="235" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">God's Plan</text>
+    <text x="250" y="258" text-anchor="middle" font-size="12" fill="#34aadc">Drake — Scorpion</text>
+    <text x="250" y="278" text-anchor="middle" font-size="11" fill="#4cd964">STATE: PLAYING 🟢</text>
+
+    <!-- Таймлайн трека (01:42 из 03:18) -->
+    <g transform="translate(45, 295)">
+      <text x="0" y="10" class="gray">01:42</text>
+      <rect x="45" y="4" width="320" height="6" rx="3" fill="#1c1c1e"/>
+      <rect x="45" y="4" width="168" height="6" rx="3" fill="#34aadc"/>
+      <circle cx="213" cy="7" r="5" fill="#ffffff" stroke="#34aadc" stroke-width="2"/>
+      <text x="410" y="10" text-anchor="end" class="gray">03:18</text>
+    </g>
+
+    <!-- Кнопки управления плеером -->
+    <g transform="translate(250, 350)" text-anchor="middle" font-size="16" fill="#ffffff">
+      <text x="-90" y="5" fill="#666666" font-size="13">🔀</text>
+      <text x="-45" y="5">⏮</text>
+      <circle cx="0" cy="0" r="18" fill="#1c1c1e" stroke="#333333" stroke-width="1"/>
+      <text x="0" y="5" font-size="14">⏸</text>
+      <text x="45" y="5">⏭</text>
+      <text x="90" y="5" fill="#4cd964" font-size="13">🔁</text>
+    </g>
+
+    <!-- Анимированный прыгающий эквалайзер -->
+    <g>
+      <rect x="70" width="8" height="15" y="425" class="eq-bar eq1"/>
+      <rect x="88" width="8" height="25" y="415" class="eq-bar eq2"/>
+      <rect x="106" width="8" height="10" y="430" class="eq-bar eq3"/>
+      <rect x="124" width="8" height="30" y="410" class="eq-bar eq4"/>
+      <rect x="142" width="8" height="18" y="422" class="eq-bar eq5"/>
+      <rect x="160" width="8" height="28" y="412" class="eq-bar eq6"/>
+      <rect x="178" width="8" height="12" y="428" class="eq-bar eq1"/>
+      <rect x="196" width="8" height="35" y="405" class="eq-bar eq3"/>
+      
+      <rect x="214" width="8" height="20" y="420" class="eq-bar eq2"/>
+      <rect x="232" width="8" height="38" y="402" class="eq-bar eq4"/>
+      <rect x="250" width="8" height="15" y="425" class="eq-bar eq6"/>
+      <rect x="268" width="8" height="30" y="410" class="eq-bar eq1"/>
+      <rect x="286" width="8" height="22" y="418" class="eq-bar eq5"/>
+      <rect x="304" width="8" height="34" y="406" class="eq-bar eq3"/>
+      <rect x="322" width="8" height="14" y="426" class="eq-bar eq2"/>
+      <rect x="340" width="8" height="28" y="412" class="eq-bar eq4"/>
+      
+      <rect x="358" width="8" height="18" y="422" class="eq-bar eq6"/>
+      <rect x="376" width="8" height="32" y="408" class="eq-bar eq1"/>
+      <rect x="394" width="8" height="12" y="428" class="eq-bar eq5"/>
+      <rect x="412" width="8" height="20" y="420" class="eq-bar eq2"/>
+    </g>
+  </g>
+</svg>
