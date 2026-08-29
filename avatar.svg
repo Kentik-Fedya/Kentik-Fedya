@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4cd964">
+        <animate attributeName="stop-color" values="#4cd964;#34aadc;#1f6feb;#a855f7;#4cd964" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#34aadc">
+        <animate attributeName="stop-color" values="#34aadc;#1f6feb;#a855f7;#4cd964;#34aadc" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#1f6feb">
+        <animate attributeName="stop-color" values="#1f6feb;#a855f7;#4cd964;#34aadc;#1f6feb" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <style>
+      .bg { fill: #000000; stroke: #1c1c1e; stroke-width: 2px; }
+      .art { 
+        font-family: "SF Mono", "Monaco", monospace; 
+        font-size: 3.1px; 
+        font-weight: 900; 
+        letter-spacing: 0.1px;
+        fill: url(#cyber); 
+        text-anchor: middle; 
+      }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" rx="14" class="bg"/>
+  <g class="art">
+  <text x="250" y="31.0" xml:space="preserve">                                                                                                                                                                               </text>
+  <text x="250" y="35.9" xml:space="preserve">                                                                                                                                                                               </text>
+  <text x="250" y="40.9" xml:space="preserve">                                                                                                                                                                               </text>
+  <text x="250" y="45.8" xml:space="preserve">                                                                                                                                                                               </text>
+  <text x="250" y="50.8" xml:space="preserve">                                                                                                                                                                               </text>
+  <text x="250" y="55.7" xml:space="preserve">                                                                          `+: `~:~!:                                                                                           </text>
+  <text x="250" y="60.7" xml:space="preserve">                                                                      .;!n$M%*%C!`rnnznzrr*;!=:'                                                                               </text>
+  <text x="250" y="65.6" xml:space="preserve">                                                               . !=rn*xC##r!:+*:~.x`*:~+xnrunxzurr`.:.                                                                         </text>
+  <text x="250" y="70.6" xml:space="preserve">                                                           `!+x#nzx++*x=: ;!;.;;*+..*~.x= :;==r=;*r*+!=+;;:                                                                    </text>
+  <text x="250" y="75.5" xml:space="preserve">                                                       `!+n%uCnz*+=*x*~:!~:. .'`~: .x':r:' ~=~~*=*+*:~!;~*xx!`                                                                 </text>
+  <text x="250" y="80.5" xml:space="preserve">                                                    .!xCnxxxuz*r**!!;;!+~'   `:.:.'=` ` `=``'~;~~;;=!!;'';!*nzr+`                                                              </text>
+  <text x="250" y="85.4" xml:space="preserve">                                                  ;x$$uz*+=!rz*!+!;`=`'; ;:' ;!`. :`;`~:!+=~  '`:`':~;+: ~!'+xnzu*`                                                            </text>
+  <text x="250" y="90.3" xml:space="preserve">                                                'nM&amp;Cn+~!!*r*xzz+!!;!'~!`;~`!;`~ `` ;:`==``'~~. '``.;+`!!::~.;+nuuCz                                                           </text>
+  <text x="250" y="95.3" xml:space="preserve">                                               +W@ur;`rr+*+==*x!!~!x~:```` !;:  .';:xz;.`;;''!~ .''=.!z=~r`:`;+;+%%xu;                                                         </text>
+  <text x="250" y="100.2" xml:space="preserve">                                             :C$z+!rrz*;`'~!!~:=;!=;.`:``  x;;* ` +*+rz!:;!.''~=!'.`=!+#='nz+~:r;~n$rx*.                                                       </text>
+  <text x="250" y="105.2" xml:space="preserve">                                            x&amp;#nrrr;=~'~::;':~;*;+=`:=.`' ;!: n+`~=+;.!`:;*:.!;;rzz!'+=!nx:~x= =r;!*%r=*~                                                      </text>
+  <text x="250" y="110.1" xml:space="preserve">                                           #$#nrr+;:`~;: ~~!rxn*x=.';.`!  =x~; u+;: ``;;`';x;::!rrrn+~u=:rz~`z;!r:*++#x==u;                                                    </text>
+  <text x="250" y="115.1" xml:space="preserve">                                         `%&amp;Cnnr*ru=:..:!x+x*r!:`  ;:~'`. ;ux=!'=  . .``.::;*x*;;**+;:~+xx!*+!C~~=~*+x#u;!ur                                                   </text>
+  <text x="250" y="120.0" xml:space="preserve">                                         M@zzr~~!*=~;!+x+!~:';~;.;'=;: `' ';!.`;`:'..`````'=:~+xz;!*z*~;:+**;;=*+:++!*rzC!:+n                                                  </text>
+  <text x="250" y="125.0" xml:space="preserve">                                       'C&amp;Crr=nuuz**==!`'.::!*~;!~.`:: .  '` `  ``~'  ::~:`++r*+r$x=r#nz+!;=!;:~!==x*=+++#!.:n                                                 </text>
+  <text x="250" y="129.9" xml:space="preserve">                                      .#%zxxxCnurx!' ''. '::!~!~ ;` =*. .    !.  .'~`'``;~;*r+*r~!zz=*%Cxx*=~+:!+=~*zx=*=xx=:+n                                                </text>
+  <text x="250" y="134.8" xml:space="preserve">                                      #%zxuuxnrx;:;:;`.;+=xr*~': '+ ;*`!.    `  `   ;;~+++=!=~!!*=~'!;`zCx+rx+~~;!z:+Cu!~*ur+;u!                                               </text>
+  <text x="250" y="139.8" xml:space="preserve">                                     *&amp;%#*!nC*=;~==~ `!x++r==`=!. ~.=* '~'  '' ' '...':~+*z;!*!=`:z! '`.xnr!;*=!+'z=;xnn+:*nr!!#                                               </text>
+  <text x="250" y="144.7" xml:space="preserve">                                     MCC+xxnzrrx=;' ~*!!+*+z*r~;:.  !!! `~;    .  `'':: :!=x~!!~*; r*``. =*x=`~;x':!+!rn+*:!#*:x*                                              </text>
+  <text x="250" y="149.7" xml:space="preserve">                                    *Cu#%uzr+r; ``~nx=!~xr*!=~~!`.  ``;:  `!.  ;  .~'==*~;==x=+*!+;.!*;;: ;+r+=:~;:`!*`xrr=`;n*'#'                                             </text>
+  <text x="250" y="154.6" xml:space="preserve">                                    #$#@r+r~.!:++zn+!*`ru=`r+n='~` ; `:`:.  ;   `  '~!r!*r;;;r+!+=!``~!~:' '~!+=!:` :~~'rn*r:`x=+x                                             </text>
+  <text x="250" y="159.6" xml:space="preserve">                                   ;M$CC**=+!n+*u*==+ ~C~!+*%+:!::!. ;;:;`'.'` .  `'!~+*~=+=~`!=!~*=  '~` `' :=~;~`': ~;:ru*!~`=`u~                                            </text>
+  <text x="250" y="164.5" xml:space="preserve">                                   *@n#CnrC+rx=z*`=;:x=~+!xx:=n!!:'. ; .!;`.  `;: : !z~:~~;~z=`.;~:==:. ;`.;: .;+=;:'  .;:*r*=*`'+z                                            </text>
+  <text x="250" y="169.5" xml:space="preserve">                                   C&amp;u%*r=+z+!==`.*;r` r;z;'!n;==' ;'.; `+*:!; :~:;; =x~':`:;=!...;!=!! ';;`;!. :+;;:``'  :!;:~*:`C:                                           </text>
+  <text x="250" y="174.4" xml:space="preserve">                                   $@#u!%z*!!+;;`.x~:'==+: ;* ;*:;`'r ~~ `:!~x` +*:*; .*=`;'';~``' `~!~! `~:..*; '=~;`:=:  ;;:`:~:&amp;:                                           </text>
+  <text x="250" y="179.4" xml:space="preserve">                                   @%x*n#r***~:`.+=:*`!+'.:` .=+~r~:`!`*= ;'.'~:`&amp;~:z'  ;:;!::.:``!:`;!~~ `:``.=~  ;` `:~=.';~~;;:n:                                           </text>
+  <text x="250" y="184.3" xml:space="preserve">                                  .MCx#zrnzrx;` !x.'.*x;:` .'.``*:~! =+ xr`~`!.: !n.!n;!'``'':`''`!!~;`:~= :.'; ~;'':~':`;~~''!!!!x;                                           </text>
+  <text x="250" y="189.2" xml:space="preserve">                                   @C%+C&amp;x+r`~`;r.~`ru~~' :.   .~~::`!+~ ;*;``:`` :!'~;```' ';'  :'~;!;: ~~';..````` `:`:` `=' :=!#~                                           </text>
+  <text x="250" y="194.2" xml:space="preserve">                                   %MCunrxr'+:~z:~;x=';` .      !:'' =* !~:';:;+: ``;.::  :` '`. ': ::;:..:~.'  .''.'.  :   .;='::&amp;`                                           </text>
+  <text x="250" y="199.1" xml:space="preserve">                                   +MCzrx!!+~*r:+!`=:+`        ': :'  ! *;+';;.~;`.` ; .:  `' `'  .: :.'.'.'~`'   .; ..'.      ~~;n                                            </text>
+  <text x="250" y="204.1" xml:space="preserve">                                   !M%nzx*+=xr.=! r~=` .     .  . .   .'*.x~!=:.  .'. :'.` .`..'   '` ' ' .. ;;!'  ' ...'. .'  '`r*                                            </text>
+  <text x="250" y="209.0" xml:space="preserve">                                    $uzx=*rr!'+~ ;=!;     .       . .  `! !! +`.'   .. '.    . .'    `.   ';  .:;.'.  .. '` ::  ;r.                                            </text>
+  <text x="250" y="214.0" xml:space="preserve">                                    xMurzxx+;;* .+;':... `.          !:`. ';.;;:.    ;'    '    '.'` `.    .:' .::. '`' `'`:  :.C:                                             </text>
+  <text x="250" y="218.9" xml:space="preserve">                                    .MnzCxn!~* `;`'~`       .        .     ::``~.  ' ::.          '.   .     '.  '`;  .'   !`..%*                                              </text>
+  <text x="250" y="223.9" xml:space="preserve">                                     !WCCn+`+`'r.`.!                    .. .`` ':.. ' `                     .'`.' ..    .. ;:'C$                                               </text>
+  <text x="250" y="228.8" xml:space="preserve">                                      z&amp;xrr=~;;.`.`.               '      . `'  `' ' .                        '`.'`  ` .'.`=.=xnunC;                                           </text>
+  <text x="250" y="233.7" xml:space="preserve">                                      '%C+nx+'';. :     .  .`     '       . .'`  ` '.  .   .                  `'`:'` ;' `;.::!C$%r*n~                                          </text>
+  <text x="250" y="238.7" xml:space="preserve">                                       u#uu#*=+:;:;.:.. '.''`. '''.    .  ...  `  :' '  .               ..  '`;*=+x~'`:``;;~+nnzr.':$'                                         </text>
+  <text x="250" y="243.6" xml:space="preserve">                                       .%*zM%*=zuz*+*+;``'::;:.:''' : ;`    '`  .  '. `         . .     ..  `!xnuuCr!:`~;!!rC+:r%.'*z                                          </text>
+  <text x="250" y="248.6" xml:space="preserve">                                         z~&amp;n%xx$uCxxx=z~!~!: `;':; ~.:~.'` ':  `'. ``'.           ''.  .`!xxzCuCCun+;`;=+nurxrz@~~C*                                          </text>
+  <text x="250" y="253.5" xml:space="preserve">                                          !xu$%*z#uCu+ru**+*~`~;!!;'+';!:`:`:!. ':.`'';;`:    ... .;+rxnCC#uuuC#####x!;`r*x:'!!*%nx%                                           </text>
+  <text x="250" y="258.5" xml:space="preserve">                                          :r*&amp;WM##u+!~:r++zrnr=!==!!!!;;=!~!~~~`':. :''`~;''     ...;~=r***zuuC##%%%u*~:=#;;``:=%u$~                                           </text>
+  <text x="250" y="263.4" xml:space="preserve">                                           $xCMM@u=::     '`;rx!+x**+=+~=*!+!!=~;;`   .          .:!~~;~=*u#CC##%%%%#x=!*#*x+!~*@C$                                            </text>
+  <text x="250" y="268.4" xml:space="preserve">                                           $MuMMMWW@&amp;%x!~: ` ;~. !x*r**==*======;:'.. .'''`;!=*rxxuuuCu##CCuuC#%$$%%%nrx#$uCx*u##&amp;*                                            </text>
+  <text x="250" y="273.3" xml:space="preserve">                                           ;$MMWMMWW@%&amp;%Cxx**+~!:;++xnnr++++++=!!!~!!;::~!=====!!++=++rrxxznu##%$$%%%#u#$ru%$$C*n$.                                            </text>
+  <text x="250" y="278.3" xml:space="preserve">                                             uWMW&amp;%$n=+;!+.  '' ':'::=x%n**=+*++=~:.   `.      ~~ .`;::!=rnC##%%$%%%%%#&amp;x=&amp;M&amp;C=u@x                                             </text>
+  <text x="250" y="283.2" xml:space="preserve">                                              CMM@#%%nzn *z~..  `z`  .`!%z+***++!: .   ~x. ..`~C+;=rxznuC##%%%%%%%%%%%%$#&amp;%$&amp;@M@@.                                             </text>
+  <text x="250" y="288.1" xml:space="preserve">                                              ~WMM$%%&amp;&amp;&amp;%~`=:~;`=;''``~`zn++*rx+=;`:.`..:!~~;!*;!*xnuuCC#%%$%%%%$%%#%%%#$&amp;&amp;@@$&amp;M=                                              </text>
+  <text x="250" y="293.1" xml:space="preserve">                                               &amp;WMM%CCCnCCx++!!!;:;:;~~~Cx+**rzr+=!;~``'`::!~==+rxxnuC#%%%%$$%$%#%##%%$z%@@%%@$`                                               </text>
+  <text x="250" y="298.0" xml:space="preserve">                                               xMMM$uunrrrrrr*+!~~~~!=!xM*+**rxxrr+++=!!;;~!=+rxxnC##%%%$%%$%#%%###%%%&amp;ru%$#C*                                                 </text>
+  <text x="250" y="303.0" xml:space="preserve">                                               'WMMM%nxxrr*++====!=+*+r@&amp;**xxzxxzr*rxxrrr++=+*rxnuC##%$%%##%%%#####%%$&amp;' ...                                                   </text>
+  <text x="250" y="307.9" xml:space="preserve">                                                #WMW@#zx***++++++*r*+z@M&amp;rxuCuunnzzznnznnuuunnnznuC#####C########C%#%Mu                                                        </text>
+  <text x="250" y="312.9" xml:space="preserve">                                                'MMMM&amp;uzxr***+++****x$MM@rx%%CCuuCCCCCCCCCC#%###C##CCCuCCCCCCC#C#C#%%M+                                                        </text>
+  <text x="250" y="317.8" xml:space="preserve">                                                 zWMMM$nxxrr**+***rrr%WM$zC&amp;$#%%###uzuuuCCC######CCCCCCCCCCCCCCC###%$M'                                                        </text>
+  <text x="250" y="322.8" xml:space="preserve">                                                  MMMM@#nxrrr*****r!*#@W#z%@&amp;%$%#CC#urznnnCCCCC#C#uuCCCCCCCCCCC###%#&amp;&amp;                                                         </text>
+  <text x="250" y="327.7" xml:space="preserve">                                                  +WMMM@%zzxxrr**r;z&amp;C@@znC&amp;&amp;%$%##$%$%*xznuuCC#CC#CCCCCuCCCCC#CC##%#@r                                                         </text>
+  <text x="250" y="332.6" xml:space="preserve">                                                   %MMMM&amp;%nzxrr**~+W$MWCznC$$$$%%%%%$@x*nznuuCCCCCCCCCCuCCCCCCCC####M;                                                         </text>
+  <text x="250" y="337.6" xml:space="preserve">                                                   `MMMMM$Cuzrr*r=!&amp;WW%xnCu#C%%#C###%#nu#unCuuCCCCCCCCCCCCCCCu####C$M`                                                         </text>
+  <text x="250" y="342.5" xml:space="preserve">                                                    rWMWM@$Cnzrrrx!;+$#*xxxnCC##unr*+!#$%%#CCCCCuCCCCCuCCCCCCCC#C#%$@'                                                         </text>
+  <text x="250" y="347.5" xml:space="preserve">                                                     %WMMM@%uuzxxrr*~=CCnzuzunr+!~~!~z&amp;$%%%#C#CCCCCCuCuCuuCuC###C$%CM:                                                         </text>
+  <text x="250" y="352.4" xml:space="preserve">                                                     .&amp;MMWM&amp;$%Cuzx*xxznur*r+=+++**xxu&amp;%%#%%%#CCCCCCuuuuuuuCuC###$CC#M;                                                         </text>
+  <text x="250" y="357.4" xml:space="preserve">                                                      :MWMWM&amp;@&amp;#nn*rx*zxr++=!=++xxu##C###CC##CCuuuuuuuuuuuCC#C#$un#%Mr                                                         </text>
+  <text x="250" y="362.3" xml:space="preserve">                                                       ;&amp;WMWM@M$Czxu$%Cur!~;:~*xzu#C#CCCuCuuuCuunnuunuuuuuCC#$%xz#%%$M!                                                        </text>
+  <text x="250" y="367.3" xml:space="preserve">                                                        `@WMMMM#n=`:!+rzzzzx**rrrxrxunz*;!++rnzuununnnnuuuC#%urzC#%$$@Mn'                                                      </text>
+  <text x="250" y="372.2" xml:space="preserve">                                                         'CWMMM%nx*! `+;:::;~;:``::;~;;;~~=**rxznnnnnnnuuC%Cr*nuC#%$&amp;&amp;&amp;M@n:                                                    </text>
+  <text x="250" y="377.2" xml:space="preserve">                                                           &amp;MMM@@#CCr%nz=;:`:~~++rxxxuuuuzzzxxxxxxznnnnC%Cx+*znu##%$$$&amp;@@MM$zrn%&amp;&amp;&amp;$n*;.                                       </text>
+  <text x="250" y="382.1" xml:space="preserve">                                                        .'*&amp;MMWM@@%#Cu%%Cx*rrzrzxxxzxxrxzxxxxxxxxxznnu##x+*rxznC##%%$$&amp;@@&amp;@@MMM@@#uC%MW#&amp;@r                                    </text>
+  <text x="250" y="387.0" xml:space="preserve">                                                  .`=zz$MMWWMWC&amp;M&amp;@&amp;%nxzznn**+!+****+***rrr*rxxxxznuC#x+=+*rznuC##%%$$&amp;&amp;@@@@@@@MMM&amp;#n=+%MWWC`                                  </text>
+  <text x="250" y="392.0" xml:space="preserve">                                           .'`;rn#MWWWWM@@MMMW:nWM$&amp;&amp;%nr+=!;;;`:;:~=+**rr**rrxxxzn%ux*++*rrxnuuC%%%$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@@@MMM$#$WWMMWW$x'                               </text>
+  <text x="250" y="396.9" xml:space="preserve">                                       `!u%MWWWWWWM@MM&amp;$&amp;@WMMW:%MMMM@$$zr*+++**rxnuC##Cuuzzzzzznuux******xxznu####%$$$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@$%&amp;WWMWWWMMWWMC`                             </text>
+  <text x="250" y="401.9" xml:space="preserve">                                 .!=C%MWWWWWMMM@MM%$WW&amp;$@$WMMW`%WMMMWMW@CrrrrznnuuuuuuCuunznznCuzrrx****rzxnnC###%%%%$$$$$&amp;&amp;&amp;$&amp;&amp;%C$MWMMWWWWWWMMWWM#*:                          </text>
+  <text x="250" y="406.8" xml:space="preserve">                             `=#$@WWWWWMMMMMMM$MW%C@WM@#M#WMWM.CMMM&amp;%&amp;MMM#z*rrrrrxxxxxxxzzzuunzxxxrr*rrxxxznuCC#%##%$$$$$$$$&amp;&amp;%CC&amp;WWMWWWWWWWWWWWMWWWW&amp;z!`                      </text>
+  <text x="250" y="411.8" xml:space="preserve">                         `!u$WWWWMMMMMM$MMMWM%@M$n$WM@MCM&amp;MWMW`*WMWM&amp;nu%&amp;@#xrrrrrrrrxxznnnzxxzzzxxrrrrrxzznnCC####%%$$&amp;$%$$$#uu&amp;WWMWWWWWWWWWWWMMWMMMMWWWW$u=`                  </text>
+  <text x="250" y="416.7" xml:space="preserve">                     .!n&amp;WWWWMMMMMMMW@%&amp;WMMM$$WM%$MMMMW$$M$WMW* MMMM@$Cnzu$&amp;$$%#CCCuunnzxxxxznzxxrrrrrrxxnnuuu###%%#%$$$%$#nu$MWMMWWWWWWWWWWWWMMWWWWWMMMMWWWW&amp;z=:              </text>
+  <text x="250" y="421.7" xml:space="preserve">                   !uMWWWMMMMMMMMMMW@C$WWMM@@WM&amp;&amp;WMMWMM@#M%MMM@`~WMMM&amp;%Cnzu%MM$%#CunzzzxxzxzxxzxzxrrrxxxznuuuuC###%%%#$%uzu&amp;WWMMWMWWWWWWWWWWWMWWWWWWWWWWWMMMMWWWWM$C*`         </text>
+  <text x="250" y="426.6" xml:space="preserve">                ;n@WWWMMMMMMMWM@&amp;MW@CCMM&amp;MMW@%%&amp;M@@WWM@W&amp;&amp;@$WMW@:!WMM@$#unnu&amp;M&amp;#CuunnzzzzzxxxxxzxrxrrxzznunuCCCC##%%%Cun#@WWMMWWWWWWWWWWWWWWMMWWMMWWWWWWWWWWWMMMMWWWWW&amp;C*:     </text>
+  <text x="250" y="431.5" xml:space="preserve">             .*$WWWMMMWWWMMMM@&amp;&amp;@MM%u$W#%MWM##%MM&amp;MWW@@MM$@&amp;&amp;WMMW~;MWM@$#unu#&amp;&amp;%ununzzzxxxzxxzxxxrrrxznznnnuCC###CnxnC$MWWMMWWWWWWWWWWMMWWWWMMWWWWWWWWWWWWWWWWWWWMMMMMWWWW&amp;x!. </text>
+  <text x="250" y="436.5" xml:space="preserve">           .uMWWMMMWMMMMM&amp;@M@$$&amp;MW&amp;C#&amp;&amp;#$MM$##$M@&amp;MWMMM@MM@M$&amp;WMMW+'nMM@%Cunu#$$#unnzzzxxxxxxxxxxxxxzznnuuuCCuuzrxuC@WWMMMWWWWWWWWWWWWMMWWWWMMWWWWWMMMWWWWWWWWWWWWWWWWMMMMWWWM#</text>
+  <text x="250" y="441.4" xml:space="preserve">          =@WWMMWMWMMMMMM&amp;@@&amp;&amp;$&amp;MM$%%%%%$WM$#%%@WMMWMMMMMMMMM$@WWMWC:;x&amp;M&amp;CunuC###CnnnzzxzxxxzxxxxxzznuCCunzrrxu$MWWWMMWWWWWWWMWWWWWWWWWWWWWMMWMMMWWMMWWWWWWWWWWWWWWWWWWWWMMMWW</text>
+  <text x="250" y="446.4" xml:space="preserve">        :$WWMWWWWMWMMMMM@&amp;@&amp;&amp;&amp;$MMM%%%#%#@WW@#%#&amp;MMMMMMMWMM@MMM@$MWMWWC~;*#%Cuuuunuuuunnnnzzzzzzzzznnzzzx*rxn%@MWWWMMMWMMWWWWWWWWWWWWWWWWWMWWMMWMMMWM@MWWWWWWWWWWWWWWWWWWWWWWWMM</text>
+  <text x="250" y="451.3" xml:space="preserve">       xWWMMWWWWMMMMMMMM&amp;&amp;&amp;@&amp;$$&amp;MM%%%%%C&amp;WW&amp;%$#$&amp;MMMMMWMMM@MMMMM@@MM@WW&amp;ux*=+++xxznnnuunnnnzxxrr*****xnC$@WWWMMMMMMMMMMMMMWWWWWWMWWWWWWMMMWWMMWMMMWMMWWWWWWWWMWWWMMWWWWWWWWWWWW</text>
+  <text x="250" y="456.3" xml:space="preserve">     :$WMMWMMWWWMMMMM@M@&amp;&amp;&amp;&amp;$&amp;$&amp;M@%%%#%#%WM@$$#$$@WWWMMMWMMMM&amp;MWMMMMMMMM@MM$Czr=!~~~~~~==!!++rxzuC%$@MMWWMMMMMMWMWWMMMMMMWWWWWWWWWWWWWWWWMMWMMWMMWWMMWWWWWWWWWWWWMMWWMWWWWWWWWW</text>
+  <text x="250" y="461.2" xml:space="preserve">    `MWM@MM@@WMMMMMM@@@&amp;&amp;&amp;&amp;&amp;$$$&amp;@&amp;$%%%%%%MMM$$%%%MMWWWMMWMMMM&amp;&amp;@MMM@@@@MM@WMWWWWM@&amp;$$$$$$&amp;&amp;@MWWMMWWMMMMMMMWWWMMMMMMMMMMWWWWWWWWWWWWWWWWWMMMWMMWMWWWMMWMMMMWWMMWWWMMWWMWWWWWWWWW</text>
+  <text x="250" y="466.2" xml:space="preserve">   `@MMMMMM@@WMWMMMM@@@&amp;&amp;&amp;&amp;&amp;$$&amp;@@&amp;%%%%#$$MWM&amp;%%%$@MWMMWMWMMM@M@%M&amp;MMWMM@M@@MMMMMMMMWMMMM@MMM@@@MMMMMMWWMWWWMMMMMMMMMWMMWWWWWWWWWWMWWMWWWMMWWMWMMMMWMMWMMMMWWWWWMWMMWWWWWWWWWWWW</text>
+  <text x="250" y="471.1" xml:space="preserve">  !@WMMMM&amp;M@@MMWWMMM@@@&amp;@&amp;$&amp;$&amp;$@M%%%%%#$&amp;MMM&amp;$%$$&amp;MWMMMMMWMMMMM&amp;@$@&amp;MMM@@@@&amp;$@@@@@@&amp;@&amp;&amp;@&amp;@@@@@MMMMMMMMM@MMMMMMMMMWWMWWWWWWWWMWWWWWMMMWWWWWWWMMWWMMMMMMWWMMMMWWWMMMWWWWWWWWWWWWW</text>
+  <text x="250" y="476.1" xml:space="preserve"> *WWMMWMM@MMMMMWMMMWM@@&amp;@@&amp;$&amp;&amp;$@@$%%%%%$@WM&amp;@&amp;%$&amp;@MWMMMMMWWMMMMM&amp;@M&amp;&amp;@@MMMM@@@@&amp;$&amp;$%$$%&amp;$$&amp;&amp;&amp;&amp;@@@MM@@@M@MMMMMMMMWWWWWWWWWMWWMWWWWWMMMWWWWMWWWWWMWMMWMMWWMMMWMMMWMMMWMMWMMWWWWWW</text>
+  </g>
+</svg>
