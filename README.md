@@ -21,7 +21,7 @@
   </tr>
 </table>
 
-<!-- 3. НИЗ: Счетчик просмотров профиля (Кастомный) -->
+<!-- 3. НИЗ: Счетчик просмотров профиля -->
 <p align="center">
-  <img src="https://readme-counter.vercel.app/counter?user=Kentik-Fedya&style=for-the-badge&color=000000&labelColor=000000" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Kentik-Fedya&style=flat-square&color=000000&label_color=000000&label=VIEWS" alt="Profile Views">
 </p>
