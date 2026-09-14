@@ -9,13 +9,13 @@
     <td width="50%" align="center" style="border: none; background: transparent; padding: 10px;">
       <a href="#">
         <!-- Твой Ultra-HD ASCII Аватар -->
-        <img src="avatar.svg" width="100%" alt="ASCII Avatar">
+        <img src="avatar.svg" width="90%" alt="ASCII Avatar">
       </a>
     </td>
     <td width="50%" align="center" style="border: none; background: transparent; padding: 10px;">
       <a href="#">
         <!-- Твой Киберпанк Музыкальный Плеер с Эквалайзером -->
-        <img src="player.svg" width="100%" alt="Music Player">
+        <img src="player.svg" width="90%" alt="Music Player">
       </a>
     </td>
   </tr>
