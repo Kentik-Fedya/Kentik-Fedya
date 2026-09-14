@@ -19,48 +19,9 @@
   </tr>
 </table>
 
-<!-- 3. НИЗ: Кастомный счетчик просмотров профиля с киберпанк стилем -->
+<!-- 3. НИЗ: Счетчик просмотров профиля -->
 <p align="center" style="margin-top: 40px; margin-bottom: 20px;">
-  <svg width="280" height="70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70">
-    <defs>
-      <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#00FF41;stop-opacity:1" />
-        <stop offset="50%" style="stop-color:#39FF14;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#00CC33;stop-opacity:1" />
-      </linearGradient>
-      <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#0f1729;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#1a2855;stop-opacity:1" />
-      </linearGradient>
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-        <feMerge>
-          <feMergeNode in="coloredBlur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-      <filter id="shadow">
-        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.5"/>
-      </filter>
-    </defs>
-    
-    <rect width="280" height="70" fill="url(#bgGradient)" rx="8"/>
-    <rect width="280" height="70" fill="none" stroke="url(#neonGreen)" stroke-width="2" rx="8" filter="url(#glow)"/>
-    
-    <g stroke="url(#neonGreen)" stroke-width="2" fill="none" filter="url(#glow)">
-      <line x1="15" y1="10" x2="25" y2="10"/>
-      <line x1="10" y1="15" x2="10" y2="25"/>
-      <line x1="265" y1="10" x2="275" y2="10"/>
-      <line x1="280" y1="15" x2="280" y2="25"/>
-      <line x1="15" y1="60" x2="25" y2="60"/>
-      <line x1="10" y1="55" x2="10" y2="65"/>
-      <line x1="265" y1="60" x2="275" y2="60"/>
-      <line x1="280" y1="55" x2="280" y2="65"/>
-    </g>
-    
-    <text x="140" y="38" font-family="'Courier New', monospace" font-size="18" font-weight="bold" fill="url(#neonGreen)" text-anchor="middle" filter="url(#glow)">⚡ PROFILE VIEWS ⚡</text>
-    <text x="140" y="58" font-family="'Courier New', monospace" font-size="13" fill="#00FF41" text-anchor="middle" filter="url(#glow)" opacity="0.8">› ONLINE</text>
-  </svg>
+  <img src="https://img.shields.io/badge/Profile%20Views-0-00FF41?style=for-the-badge&labelColor=0f1729&color=00CC33" alt="Profile Views" style="border: none; outline: none; box-shadow: none;">
 </p>
 
 <!-- Разделитель -->
