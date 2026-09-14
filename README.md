@@ -1,14 +1,6 @@
-<style>
-  img { border: none !important; outline: none !important; box-shadow: none !important; }
-  a { border: none !important; outline: none !important; box-shadow: none !important; text-decoration: none !important; }
-  table { border: none !important; outline: none !important; background: transparent !important; }
-  td { border: none !important; outline: none !important; box-shadow: none !important; }
-  body { background: #0a0e27 !important; }
-</style>
-
 <!-- 1. ВЕРХ: Анимированный macOS Терминал zsh -->
 <p align="center" style="margin-bottom: 30px;">
-  <img src="terminal.svg" width="100%" alt="Terminal UI">
+  <img src="terminal.svg" width="100%" alt="Terminal UI" style="border: none; outline: none; box-shadow: none;">
 </p>
 
 <!-- 2. ЦЕНТР: Два горизонтальных окна 50/50 (Аватар + Музыкальный Плеер) -->
@@ -86,13 +78,11 @@
 
 <!-- Разделитель -->
 <p align="center" style="margin: 30px 0;">
-  <img alt="Divider" src="https://user-images.githubusercontent.com/73097560/115834477-dbac4680-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+  <img alt="Divider" src="https://user-images.githubusercontent.com/73097560/115834477-dbac4680-a447-11eb-908a-139a6edaec5c.gif" width="100%" style="border: none; outline: none; box-shadow: none;">
 </p>
 
 <!-- Дополнительная информация -->
 <div align="center">
-  
-  ### 💻 Full-Stack Developer | 🎨 UI/UX Enthusiast | 🚀 Innovation Seeker
   
   [![GitHub followers](https://img.shields.io/github/followers/Kentik-Fedya?label=Follow&style=social)](https://github.com/Kentik-Fedya)
   
