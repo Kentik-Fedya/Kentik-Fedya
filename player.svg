@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
     <linearGradient id="eq-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4cd964"/>
-      <stop offset="50%" stop-color="#34aadc"/>
-      <stop offset="100%" stop-color="#1f6feb"/>
+      <stop offset="0%" stop-color="#ff006e"/>
+      <stop offset="50%" stop-color="#8338ec"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
     </linearGradient>
     <style>
       .bg { fill: #000000; stroke: #1c1c1e; stroke-width: 2px; }
@@ -11,8 +11,8 @@
       .font-mono { font-family: 'SF Mono', 'Monaco', 'Courier New', monospace; font-size: 13px; }
       .title { fill: #666; font-size: 12px; font-weight: 600; font-family: -apple-system, sans-serif; letter-spacing: 0.8px; }
       
-      .green { fill: #4cd964; font-weight: 600; }
-      .cyan { fill: #34aadc; font-weight: 600; }
+      .green { fill: #ff006e; font-weight: 600; }
+      .cyan { fill: #8338ec; font-weight: 600; }
       .white { fill: #ffffff; }
       .gray { fill: #666666; font-size: 11px; }
       
@@ -46,22 +46,22 @@
   <g class="font-mono">
     <!-- Бейдж статуса -->
     <g transform="translate(45, 75)">
-      <text x="0" y="0" font-size="11" fill="#4cd964" font-weight="bold">> AUDIO_STREAM: ACTIVE </text>
+      <text x="0" y="0" font-size="11" fill="#ff006e" font-weight="bold">> AUDIO_STREAM: ACTIVE </text>
       <text x="410" y="0" text-anchor="end" font-size="11" fill="#666666">FLAC // LOSSLESS</text>
       <line x1="0" y1="15" x2="410" y2="15" stroke="#1c1c1e" stroke-width="1.5"/>
     </g>
 
     <!-- Главный хит Дрейка (Крупный чистый текст) -->
     <text x="250" y="145" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">God's Plan</text>
-    <text x="250" y="175" text-anchor="middle" font-size="14" fill="#34aadc">Drake — Scorpion</text>
+    <text x="250" y="175" text-anchor="middle" font-size="14" fill="#8338ec">Drake — Scorpion</text>
     <text x="250" y="198" text-anchor="middle" font-size="11" fill="#666666">OVO Sound // Republic Records</text>
 
     <!-- Таймлайн трека (01:42 из 03:18) -->
     <g transform="translate(45, 240)">
       <text x="0" y="10" class="gray">01:42</text>
       <rect x="45" y="4" width="320" height="6" rx="3" fill="#1c1c1e"/>
-      <rect x="45" y="4" width="168" height="6" rx="3" fill="#34aadc"/>
-      <circle cx="213" cy="7" r="6" fill="#ffffff" stroke="#34aadc" stroke-width="2"/>
+      <rect x="45" y="4" width="168" height="6" rx="3" fill="#8338ec"/>
+      <circle cx="213" cy="7" r="6" fill="#ffffff" stroke="#8338ec" stroke-width="2"/>
       <text x="410" y="10" text-anchor="end" class="gray">03:18</text>
     </g>
 
@@ -73,7 +73,7 @@
       <circle cx="0" cy="0" r="22" fill="#1c1c1e" stroke="#333333" stroke-width="1.5"/>
       <text x="0" y="6" font-size="16">⏸</text>
       <text x="50" y="6">⏭</text>
-      <text x="100" y="6" fill="#4cd964" font-size="14"></text>
+      <text x="100" y="6" fill="#ff006e" font-size="14"></text>
     </g>
 
     <!-- Анимированный прыгающий эквалайзер (22 широкие звуковые полосы) -->
