@@ -1,3 +1,10 @@
+<style>
+  img { border: none !important; outline: none !important; box-shadow: none !important; }
+  a { border: none !important; outline: none !important; box-shadow: none !important; }
+  table { border: none !important; outline: none !important; }
+  td { border: none !important; outline: none !important; box-shadow: none !important; }
+</style>
+
 <!-- 1. ВЕРХ: Анимированный macOS Терминал zsh -->
 <p align="center">
   <img src="terminal.svg" width="100%" alt="Terminal UI">
