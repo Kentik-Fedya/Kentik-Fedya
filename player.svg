@@ -12,8 +12,8 @@
       .font-mono { font-family: 'SF Mono', 'Monaco', 'Courier New', monospace; font-size: 13px; }
       .title { fill: #666; font-size: 12px; font-weight: 600; font-family: -apple-system, sans-serif; letter-spacing: 0.8px; }
       
-      .green { fill: #ff006e; font-weight: 600; }
-      .cyan { fill: #8338ec; font-weight: 600; }
+      .green { fill: #00ff88; font-weight: 600; }
+      .cyan { fill: #00ff88; font-weight: 600; }
       .white { fill: #ffffff; }
       .gray { fill: #666666; font-size: 11px; }
       
@@ -36,7 +36,7 @@
   <!-- Окно 500x500 -->
   <rect width="100%" height="100%" rx="14" class="bg"/>
   <path d="M 1 12 Q 1 1 12 1 L 488 1 Q 499 1 499 12 L 499 35 L 1 35 Z" class="hdr"/>
-  <line x1="1" y1="35" x2="499" y2="35" stroke="#151515" stroke-width="1.5"/>
+  <line x1="1" y1="35" x2="499" y2="35" stroke="#1a8844" stroke-width="1.5"/>
 
   <!-- Кнопки macOS -->
   <circle cx="25" cy="18" r="5" fill="#ff5f56"/>
@@ -47,22 +47,22 @@
   <g class="font-mono">
     <!-- Бейдж статуса -->
     <g transform="translate(45, 75)">
-      <text x="0" y="0" font-size="11" fill="#ff006e" font-weight="bold">> AUDIO_STREAM: ACTIVE </text>
+      <text x="0" y="0" font-size="11" fill="#00ff88" font-weight="bold">> AUDIO_STREAM: ACTIVE </text>
       <text x="410" y="0" text-anchor="end" font-size="11" fill="#666666">FLAC // LOSSLESS</text>
-      <line x1="0" y1="15" x2="410" y2="15" stroke="#1c1c1e" stroke-width="1.5"/>
+      <line x1="0" y1="15" x2="410" y2="15" stroke="#1a8844" stroke-width="1.5"/>
     </g>
 
     <!-- Главный хит Дрейка (Крупный чистый текст) -->
     <text x="250" y="145" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">God's Plan</text>
-    <text x="250" y="175" text-anchor="middle" font-size="14" fill="#8338ec">Drake — Scorpion</text>
+    <text x="250" y="175" text-anchor="middle" font-size="14" fill="#00ff88">Drake — Scorpion</text>
     <text x="250" y="198" text-anchor="middle" font-size="11" fill="#666666">OVO Sound // Republic Records</text>
 
     <!-- Таймлайн трека (01:42 из 03:18) -->
     <g transform="translate(45, 240)">
       <text x="0" y="10" class="gray">01:42</text>
       <rect x="45" y="4" width="320" height="6" rx="3" fill="#1c1c1e"/>
-      <rect x="45" y="4" width="168" height="6" rx="3" fill="#8338ec"/>
-      <circle cx="213" cy="7" r="6" fill="#ffffff" stroke="#8338ec" stroke-width="2"/>
+      <rect x="45" y="4" width="168" height="6" rx="3" fill="#00ff88"/>
+      <circle cx="213" cy="7" r="6" fill="#ffffff" stroke="#00ff88" stroke-width="2"/>
       <text x="410" y="10" text-anchor="end" class="gray">03:18</text>
     </g>
 
@@ -71,10 +71,10 @@
       <text x="-100" y="6" fill="#666666" font-size="14"></text>
       <text x="-50" y="6">⏮</text>
       <!-- Центральная кнопка Pause -->
-      <circle cx="0" cy="0" r="22" fill="#1c1c1e" stroke="#333333" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="22" fill="#1c1c1e" stroke="#00ff88" stroke-width="1.5"/>
       <text x="0" y="6" font-size="16">⏸</text>
       <text x="50" y="6">⏭</text>
-      <text x="100" y="6" fill="#ff006e" font-size="14"></text>
+      <text x="100" y="6" fill="#00ff88" font-size="14"></text>
     </g>
 
     <!-- Анимированный прыгающий эквалайзер (22 широкие звуковые полосы) - сдвинут вправо, зелёный градиент -->
