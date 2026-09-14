@@ -19,9 +19,11 @@
   </tr>
 </table>
 
-<!-- 3. НИЗ: Счетчик просмотров профиля -->
+<!-- 3. НИЗ: Счетчик просмотров профиля с крутым дизайном -->
 <p align="center" style="margin-top: 40px; margin-bottom: 20px;">
-  <img src="https://img.shields.io/badge/Profile%20Views-0-00FF41?style=for-the-badge&labelColor=0f1729&color=00CC33" alt="Profile Views" style="border: none; outline: none; box-shadow: none;">
+  <a href="#" style="text-decoration: none; border: none; outline: none;">
+    <img src="https://img.shields.io/badge/👁️%20PROFILE%20VIEWS-0-00FF41?style=for-the-badge&labelColor=0f1729&color=00CC33&logo=github&logoColor=00FF41&logoWidth=15" alt="Profile Views" style="border: none; outline: none; box-shadow: none; filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3)); transition: filter 0.3s ease;">
+  </a>
 </p>
 
 <!-- Разделитель -->
