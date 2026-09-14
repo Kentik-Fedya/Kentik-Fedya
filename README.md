@@ -21,7 +21,9 @@
   </tr>
 </table>
 
-<!-- 3. НИЗ: Счетчик просмотров профиля -->
+<!-- 3. НИЗ: Кастомный счетчик просмотров профиля с киберпанк стилем -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Kentik-Fedya&style=flat-square&color=000000&label_color=000000&label=VIEWS" alt="Profile Views">
+  <a href="https://github.com/Kentik-Fedya">
+    <img src="https://img.shields.io/badge/PROFILE%20VIEWS-0-000000?style=for-the-badge&logoColor=00FF41&color=000000&borderColor=00FF41&border=1" alt="Profile Views Counter" />
+  </a>
 </p>
