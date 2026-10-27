@@ -1,1 +1,1 @@
-
+![Terminal](./terminal.svg)
