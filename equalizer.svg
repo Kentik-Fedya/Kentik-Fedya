@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 116" width="100%" height="100%" shape-rendering="crispEdges">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 236" width="100%" height="100%">
   <defs>
     <!-- Главный диагональный градиент фона (1 в 1 с терминалом) -->
     <linearGradient id="eq-bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -10,7 +9,7 @@
     </linearGradient>
 
     <!-- Мягкое внутреннее свечение -->
-    <radialGradient id="center-glow" cx="50%" cy="55%" r="55%">
+    <radialGradient id="center-glow" cx="55%" cy="55%" r="55%">
       <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.16"/>
       <stop offset="65%" stop-color="#1d4ed8" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#02050b" stop-opacity="0"/>
@@ -23,12 +22,18 @@
       <stop offset="100%" stop-color="#3a6ea8"/>
     </linearGradient>
 
-    <!-- Вертикальный градиент для горящих пикселей (от глубокого синего снизу до ледяного сверху) -->
-    <linearGradient id="pixel-grad" x1="0%" y1="92" x2="0%" y2="24" gradientUnits="userSpaceOnUse">
+    <!-- Вертикальный градиент для горящих пикселей эквалайзера -->
+    <linearGradient id="pixel-grad" x1="0" y1="92" x2="0" y2="24" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#1d4ed8"/>
       <stop offset="45%" stop-color="#3b82f6"/>
       <stop offset="78%" stop-color="#7dd3fc"/>
       <stop offset="100%" stop-color="#eef8ff"/>
+    </linearGradient>
+
+    <!-- Ледяной градиент для заголовка MY MVP WORKERS -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#8cd2ff"/>
     </linearGradient>
 
     <!-- Паттерн потушенных пикселей (фоновая LED-сетка 54x10) -->
@@ -36,7 +41,7 @@
       <rect x="0" y="0" width="10" height="5" fill="#040d1a" opacity="0.65"/>
     </pattern>
 
-    <!-- Маска из 10 горизонтальных рядов, которая делит столбики на четкие пиксели (5px высота, 2px зазор) -->
+    <!-- Маска из 10 горизонтальных рядов для пиксельного эквалайзера -->
     <clipPath id="pixel-rows">
       <rect x="44" y="24" width="752" height="5"/>
       <rect x="44" y="31" width="752" height="5"/>
@@ -51,7 +56,36 @@
     </clipPath>
   </defs>
 
-  <!-- Равномерный, идеально симметричный рассеивающийся контур (согласован со скругленными углами) -->
+  <style>
+    .main-title {
+      font-family: 'Monaco', 'Roboto Mono', 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 16.5px;
+      font-weight: 700;
+      fill: url(#title-grad);
+      letter-spacing: 0.5px;
+    }
+    .icon-label {
+      font-family: 'Monaco', 'Roboto Mono', 'Fira Code', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      fill: #9ac8ff;
+      letter-spacing: 0.4px;
+    }
+    .bob1 { animation: pixelBob 2.4s steps(2, end) infinite 0s; }
+    .bob2 { animation: pixelBob 2.4s steps(2, end) infinite -0.45s; }
+    .bob3 { animation: pixelBob 2.4s steps(2, end) infinite -0.9s; }
+    .bob4 { animation: pixelBob 2.4s steps(2, end) infinite -1.35s; }
+    .bob5 { animation: pixelBob 2.4s steps(2, end) infinite -1.8s; }
+
+    @keyframes pixelBob {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+  </style>
+
+  <!-- ======================================================================= -->
+  <!-- ПЛИТА 1: ПИКСЕЛЬНЫЙ ЭКВАЛАЙЗЕР                                          -->
+  <!-- ======================================================================= -->
   <g shape-rendering="geometricPrecision">
     <rect x="6"    y="0"   width="828" height="116" rx="21" fill="#020814" opacity="0.03"/>
     <rect x="8"    y="2"   width="824" height="112" rx="19" fill="#020814" opacity="0.06"/>
@@ -60,17 +94,13 @@
     <rect x="14"   y="8"   width="812" height="100" rx="13.5" fill="#020814" opacity="0.24"/>
     <rect x="15.2" y="9.2" width="809.6" height="97.6" rx="12.6" fill="#020814" opacity="0.34"/>
 
-    <!-- Основной корпус (ширина 808px — ровно в длину терминала) -->
     <rect x="16" y="10" width="808" height="96" rx="12" fill="url(#eq-bg)"/>
     <rect x="16" y="10" width="808" height="96" rx="12" fill="url(#center-glow)"/>
   </g>
 
-  <!-- Фоновая матрица незажженных пикселей (54 колонки по 10 рядов) -->
-  <rect x="44" y="24" width="752" height="68" fill="url(#unlit-grid)"/>
+  <rect x="44" y="24" width="752" height="68" fill="url(#unlit-grid)" shape-rendering="crispEdges"/>
 
-  <!-- ================= ГОРЯЩИЕ ПИКСЕЛЬНЫЕ КОЛОНКИ (54 ШТ.) ================= -->
-  <!-- Каждая колонка шагает строго по 1 пиксельному ряду (7px) без обрезанных половинок -->
-  <g clip-path="url(#pixel-rows)" fill="url(#pixel-grad)">
+  <g clip-path="url(#pixel-rows)" fill="url(#pixel-grad)" shape-rendering="crispEdges">
     <rect x="44"  y="80" width="10" height="12"><animate attributeName="y" values="87;80;73;66;73;80;87" dur="3.2s" begin="-0.0s"  calcMode="discrete" repeatCount="indefinite"/><animate attributeName="height" values="5;12;19;26;19;12;5" dur="3.2s" begin="-0.0s"  calcMode="discrete" repeatCount="indefinite"/></rect>
     <rect x="58"  y="73" width="10" height="19"><animate attributeName="y" values="80;73;66;59;52;59;66;73;80" dur="3.2s" begin="-0.15s" calcMode="discrete" repeatCount="indefinite"/><animate attributeName="height" values="12;19;26;33;40;33;26;19;12" dur="3.2s" begin="-0.15s" calcMode="discrete" repeatCount="indefinite"/></rect>
     <rect x="72"  y="66" width="10" height="26"><animate attributeName="y" values="73;66;59;52;45;52;59;66;73" dur="3.2s" begin="-0.3s"  calcMode="discrete" repeatCount="indefinite"/><animate attributeName="height" values="19;26;33;40;47;40;33;26;19" dur="3.2s" begin="-0.3s"  calcMode="discrete" repeatCount="indefinite"/></rect>
@@ -127,6 +157,179 @@
     <rect x="786" y="80" width="10" height="12"><animate attributeName="y" values="87;80;73;80;87" dur="3.2s" begin="-1.7s"  calcMode="discrete" repeatCount="indefinite"/><animate attributeName="height" values="5;12;19;12;5" dur="3.2s" begin="-1.7s"  calcMode="discrete" repeatCount="indefinite"/></rect>
   </g>
 
-  <!-- Внешняя градиентная обводка окна -->
   <rect x="16" y="10" width="808" height="96" rx="12" fill="none" stroke="url(#border-grad)" stroke-width="1.3" shape-rendering="geometricPrecision"/>
+
+  <!-- ======================================================================= -->
+  <!-- ПЛИТА 2: MY MVP WORKERS                                                 -->
+  <!-- ======================================================================= -->
+  <g transform="translate(0, 116)">
+    <g shape-rendering="geometricPrecision">
+      <rect x="6"    y="0"   width="828" height="120" rx="21" fill="#020814" opacity="0.03"/>
+      <rect x="8"    y="2"   width="824" height="116" rx="19" fill="#020814" opacity="0.06"/>
+      <rect x="10"   y="4"   width="820" height="112" rx="17" fill="#020814" opacity="0.10"/>
+      <rect x="12"   y="6"   width="816" height="108" rx="15" fill="#020814" opacity="0.16"/>
+      <rect x="14"   y="8"   width="812" height="104" rx="13.5" fill="#020814" opacity="0.24"/>
+      <rect x="15.2" y="9.2" width="809.6" height="101.6" rx="12.6" fill="#020814" opacity="0.34"/>
+
+      <rect x="16" y="10" width="808" height="100" rx="12" fill="url(#eq-bg)"/>
+      <rect x="16" y="10" width="808" height="100" rx="12" fill="url(#center-glow)"/>
+    </g>
+
+    <!-- Заголовок MY MVP WORKERS (отцентрован по вертикали без лишней надписи) -->
+    <g text-rendering="geometricPrecision">
+      <text x="42" y="62" class="main-title">MY MVP WORKERS</text>
+      <g shape-rendering="crispEdges">
+        <rect x="42"  y="72" width="28" height="3" fill="#4facfe"/>
+        <rect x="74"  y="72" width="14" height="3" fill="#2b5ba8"/>
+        <rect x="92"  y="72" width="6"  height="3" fill="#1b3a6e"/>
+        <rect x="102" y="72" width="3"  height="3" fill="#1b3a6e"/>
+      </g>
+    </g>
+
+    <line x1="252" y1="26" x2="252" y2="94" stroke="#182e4d" stroke-width="1"/>
+
+    <!-- 1. CURSOR -->
+    <g transform="translate(282, 20)">
+      <rect x="0" y="0" width="76" height="60" rx="8" fill="#051020" stroke="#183154" stroke-width="1" shape-rendering="geometricPrecision"/>
+      <g class="bob1" shape-rendering="crispEdges">
+        <path d="M35,8 h6 v3 h6 v3 h6 v3 h3 v21 h-3 v3 h-6 v3 h-6 v3 h-6 v-3 h-6 v-3 h-6 v-3 h-3 v-21 h3 v-3 h6 v-3 h6 z" fill="#0d1e38"/>
+        <path d="M35,8 h6 v3 h6 v3 h6 v3 h3 v21 h-3 v3 h-6 v3 h-6 v3 h-6 v-3 h-6 v-3 h-6 v-3 h-3 v-21 h3 v-3 h6 v-3 h6 z M35,11 v3 h-6 v3 h-6 v18 h6 v3 h6 v3 h6 v-3 h6 v-3 h6 v-18 h-6 v-3 h-6 v-3 z" fill="#294d80"/>
+        <path d="M23,17 h30 v3 h-3 v6 h-3 v6 h-3 v6 h-3 v6 h-3 v-18 h-6 v-3 h-6 v-3 h-3 z" fill="#eef6ff"/>
+        <rect x="38" y="32" width="3" height="12" fill="#8cd2ff"/>
+      </g>
+      <text x="38" y="76" text-anchor="middle" class="icon-label" text-rendering="geometricPrecision">Cursor</text>
+    </g>
+
+    <!-- 2. CLAUDE -->
+    <g transform="translate(390, 20)">
+      <rect x="0" y="0" width="76" height="60" rx="8" fill="#051020" stroke="#183154" stroke-width="1" shape-rendering="geometricPrecision"/>
+      <g class="bob2" shape-rendering="crispEdges">
+        <rect x="19" y="13" width="38" height="26" fill="#d97757"/>
+        <rect x="19" y="13" width="38" height="2"  fill="#eb9376"/>
+        <rect x="12" y="26" width="52" height="7"  fill="#d97757"/>
+        <rect x="12" y="26" width="7"  height="2"  fill="#eb9376"/>
+        <rect x="57" y="26" width="7"  height="2"  fill="#eb9376"/>
+        <rect x="19" y="37" width="38" height="2"  fill="#bf6143"/>
+        <rect x="22" y="39" width="4"  height="8"  fill="#d97757"/>
+        <rect x="29" y="39" width="4"  height="8"  fill="#d97757"/>
+        <rect x="43" y="39" width="4"  height="8"  fill="#d97757"/>
+        <rect x="50" y="39" width="4"  height="8"  fill="#d97757"/>
+        <rect x="26" y="20" width="4"  height="7"  fill="#051020"/>
+        <rect x="46" y="20" width="4"  height="7"  fill="#051020"/>
+      </g>
+      <text x="38" y="76" text-anchor="middle" class="icon-label" text-rendering="geometricPrecision">Claude</text>
+    </g>
+
+    <!-- 3. CHATGPT (ТОЧНЫЙ КОНТУР ИЗ ТВОЕГО JSON) -->
+    <g transform="translate(498, 20)">
+      <rect x="0" y="0" width="76" height="60" rx="8" fill="#051020" stroke="#183154" stroke-width="1" shape-rendering="geometricPrecision"/>
+      <g class="bob3">
+        <g transform="translate(17.2, 8.5) scale(0.0365)">
+          <path d="M 445 5 L 440 8 L 430 9 L 418 14 L 411 15 L 405 19 L 398 20 L 393 24 L 384 26 L 358 40 L 354 44 L 348 46 L 346 49 L 341 51 L 321 66 L 284 103 L 264 130 L 243 168 L 232 198 L 224 203 L 214 204 L 202 209 L 197 209 L 169 220 L 164 224 L 159 225 L 132 240 L 127 245 L 110 256 L 85 278 L 59 308 L 53 319 L 49 322 L 42 336 L 39 338 L 37 345 L 33 349 L 32 354 L 28 359 L 27 365 L 24 368 L 22 376 L 18 382 L 17 390 L 13 396 L 13 401 L 8 414 L 6 431 L 2 444 L 2 464 L 0 478 L 2 527 L 13 574 L 17 581 L 18 588 L 22 594 L 23 601 L 27 606 L 28 612 L 32 616 L 34 623 L 49 648 L 74 679 L 74 686 L 69 697 L 69 705 L 64 719 L 63 739 L 60 753 L 60 787 L 63 802 L 64 823 L 68 832 L 69 845 L 74 856 L 74 862 L 78 868 L 79 875 L 84 884 L 85 890 L 88 893 L 89 898 L 93 903 L 96 911 L 98 912 L 100 918 L 104 922 L 105 926 L 109 930 L 115 941 L 131 962 L 157 988 L 189 1013 L 193 1014 L 197 1018 L 214 1028 L 221 1030 L 226 1034 L 232 1035 L 237 1039 L 243 1040 L 249 1044 L 259 1046 L 266 1050 L 273 1050 L 281 1054 L 294 1055 L 311 1060 L 373 1061 L 391 1060 L 410 1055 L 416 1059 L 438 1081 L 470 1106 L 506 1126 L 512 1127 L 518 1131 L 525 1132 L 531 1136 L 538 1137 L 549 1142 L 560 1143 L 570 1147 L 589 1148 L 593 1151 L 611 1152 L 664 1151 L 665 1149 L 687 1147 L 697 1143 L 708 1142 L 719 1137 L 727 1136 L 733 1132 L 740 1131 L 746 1127 L 762 1121 L 765 1118 L 780 1111 L 793 1101 L 797 1100 L 800 1096 L 816 1085 L 853 1048 L 873 1021 L 894 983 L 904 955 L 907 951 L 913 948 L 924 947 L 932 943 L 940 942 L 947 938 L 954 937 L 960 933 L 966 932 L 1005 911 L 1010 906 L 1027 895 L 1059 865 L 1078 843 L 1084 832 L 1088 829 L 1089 825 L 1099 812 L 1100 807 L 1105 800 L 1105 797 L 1109 793 L 1110 787 L 1114 781 L 1120 766 L 1120 762 L 1125 752 L 1125 746 L 1130 734 L 1130 726 L 1135 708 L 1137 675 L 1135 624 L 1130 607 L 1129 594 L 1126 589 L 1125 580 L 1120 570 L 1120 565 L 1116 559 L 1114 550 L 1105 535 L 1104 529 L 1100 525 L 1099 520 L 1095 516 L 1088 503 L 1063 472 L 1064 462 L 1068 454 L 1069 443 L 1073 433 L 1075 405 L 1077 398 L 1077 364 L 1074 349 L 1073 328 L 1069 318 L 1068 306 L 1064 299 L 1063 289 L 1059 283 L 1058 276 L 1053 267 L 1053 263 L 1049 258 L 1048 253 L 1044 248 L 1041 240 L 1039 239 L 1037 233 L 1033 229 L 1032 225 L 1028 221 L 1022 210 L 1018 207 L 1001 184 L 980 163 L 948 138 L 944 137 L 932 128 L 920 122 L 917 122 L 913 118 L 908 117 L 900 112 L 893 111 L 888 107 L 879 106 L 873 102 L 863 101 L 856 97 L 842 96 L 826 91 L 747 91 L 727 96 L 722 93 L 705 75 L 687 60 L 652 36 L 645 34 L 641 30 L 635 29 L 631 25 L 624 24 L 621 21 L 612 19 L 606 15 L 597 14 L 590 10 L 580 9 L 566 4 L 548 3 L 544 0 L 473 0 L 468 3 Z M 694 713 L 694 821 L 686 828 L 680 830 L 676 834 L 670 836 L 666 840 L 663 840 L 660 843 L 654 845 L 650 849 L 635 856 L 624 864 L 619 865 L 605 875 L 581 887 L 579 890 L 557 901 L 551 906 L 538 912 L 534 916 L 519 923 L 517 926 L 484 943 L 482 946 L 447 964 L 444 967 L 438 968 L 433 972 L 426 973 L 415 978 L 406 979 L 401 982 L 387 983 L 377 986 L 336 987 L 317 983 L 307 983 L 294 978 L 288 978 L 278 973 L 270 972 L 267 969 L 250 962 L 237 953 L 233 952 L 213 937 L 182 905 L 162 875 L 151 853 L 150 846 L 146 840 L 145 831 L 141 823 L 140 809 L 136 797 L 136 744 L 138 738 L 145 737 L 152 742 L 157 743 L 168 751 L 174 753 L 178 757 L 184 759 L 188 763 L 191 763 L 204 772 L 219 779 L 223 783 L 236 789 L 240 793 L 245 794 L 250 799 L 253 799 L 320 839 L 333 845 L 337 849 L 342 850 L 346 854 L 370 866 L 372 869 L 386 875 L 403 875 L 409 871 L 415 870 L 419 866 L 432 860 L 436 856 L 441 855 L 445 851 L 477 834 L 481 830 L 487 828 L 516 810 L 540 798 L 544 794 L 600 763 L 604 759 L 621 751 L 632 743 L 647 736 L 651 732 L 656 731 L 657 729 L 673 721 L 677 717 L 691 710 Z M 748 535 L 781 553 L 785 557 L 800 564 L 802 567 L 826 579 L 830 583 L 836 585 L 837 587 L 842 589 L 845 594 L 845 872 L 842 903 L 838 912 L 837 923 L 833 930 L 833 934 L 828 943 L 827 949 L 823 954 L 822 960 L 797 997 L 771 1024 L 753 1038 L 736 1049 L 731 1050 L 727 1054 L 720 1056 L 717 1059 L 711 1060 L 705 1064 L 664 1075 L 623 1077 L 592 1075 L 582 1071 L 569 1070 L 563 1066 L 552 1064 L 549 1061 L 543 1060 L 521 1049 L 499 1034 L 493 1028 L 493 1026 L 502 1019 L 505 1019 L 511 1014 L 585 973 L 589 969 L 602 963 L 608 958 L 622 952 L 625 948 L 658 931 L 661 927 L 666 926 L 679 917 L 684 916 L 688 912 L 701 906 L 705 902 L 720 895 L 722 892 L 728 890 L 740 879 L 741 874 L 745 868 L 745 540 Z M 568 432 L 594 445 L 608 455 L 622 461 L 624 464 L 630 466 L 643 475 L 658 482 L 694 504 L 694 647 L 648 675 L 633 682 L 622 690 L 581 712 L 577 716 L 569 719 L 560 716 L 556 712 L 543 706 L 539 702 L 524 695 L 514 688 L 508 686 L 504 682 L 472 665 L 468 661 L 445 649 L 443 645 L 444 504 L 462 492 L 477 485 L 481 481 L 503 470 L 507 466 L 513 464 L 523 457 L 529 455 L 533 451 L 539 449 L 559 436 Z M 718 345 L 722 344 L 731 349 L 732 351 L 738 353 L 752 363 L 757 364 L 796 388 L 809 394 L 815 399 L 820 400 L 822 403 L 835 409 L 839 413 L 846 415 L 848 418 L 880 435 L 884 439 L 908 451 L 912 455 L 917 456 L 919 459 L 951 476 L 963 485 L 969 487 L 972 491 L 974 491 L 976 494 L 988 502 L 1017 533 L 1017 535 L 1032 555 L 1047 585 L 1049 595 L 1052 598 L 1053 608 L 1058 620 L 1058 630 L 1063 658 L 1063 679 L 1058 704 L 1058 713 L 1054 722 L 1052 734 L 1048 740 L 1048 745 L 1032 777 L 1006 812 L 990 828 L 976 839 L 972 840 L 969 844 L 953 854 L 937 861 L 932 865 L 928 865 L 923 868 L 920 865 L 920 588 L 914 574 L 903 563 L 898 562 L 894 558 L 872 547 L 868 543 L 862 541 L 842 528 L 836 526 L 832 522 L 810 511 L 796 501 L 793 501 L 790 498 L 784 496 L 770 486 L 748 475 L 744 471 L 739 470 L 735 466 L 713 455 L 709 451 L 703 449 L 683 436 L 677 434 L 673 430 L 651 419 L 647 415 L 640 413 L 638 410 L 623 402 L 630 395 L 636 393 L 640 389 L 664 377 L 675 369 L 681 367 L 692 359 L 697 358 L 701 354 Z M 206 286 L 210 286 L 215 283 L 217 286 L 217 561 L 218 567 L 223 577 L 234 588 L 256 599 L 270 609 L 275 610 L 292 620 L 296 624 L 301 625 L 305 629 L 327 640 L 331 644 L 353 655 L 367 665 L 372 666 L 376 670 L 389 676 L 393 680 L 408 687 L 421 696 L 424 696 L 428 700 L 434 702 L 447 711 L 462 718 L 464 721 L 488 733 L 490 736 L 514 749 L 514 751 L 506 757 L 500 759 L 487 768 L 465 779 L 463 782 L 439 794 L 435 798 L 420 806 L 416 807 L 399 798 L 395 794 L 390 793 L 386 789 L 354 772 L 352 769 L 337 762 L 333 758 L 328 757 L 324 753 L 302 742 L 298 738 L 283 731 L 279 727 L 274 726 L 263 718 L 257 716 L 253 712 L 248 711 L 244 707 L 203 685 L 163 660 L 161 657 L 149 649 L 127 627 L 105 596 L 90 566 L 89 559 L 85 553 L 84 543 L 80 535 L 79 520 L 75 503 L 75 466 L 79 450 L 79 440 L 84 428 L 85 418 L 88 414 L 90 405 L 111 365 L 136 334 L 155 317 L 165 311 L 168 307 Z M 1001 354 L 1001 407 L 999 413 L 994 415 L 943 385 L 937 383 L 933 379 L 928 378 L 924 374 L 911 368 L 897 358 L 892 357 L 888 353 L 866 342 L 862 338 L 857 337 L 853 333 L 847 331 L 836 323 L 804 306 L 800 302 L 793 300 L 791 297 L 769 286 L 765 282 L 757 280 L 751 276 L 735 276 L 729 280 L 721 282 L 719 285 L 711 288 L 710 290 L 695 297 L 691 301 L 676 308 L 665 316 L 634 332 L 620 342 L 598 353 L 594 357 L 589 358 L 585 362 L 581 363 L 575 368 L 572 368 L 568 372 L 553 379 L 549 383 L 543 385 L 533 392 L 525 395 L 523 398 L 499 410 L 469 429 L 464 430 L 462 433 L 452 439 L 446 441 L 443 438 L 443 331 L 446 327 L 692 185 L 700 183 L 705 179 L 712 178 L 719 174 L 729 173 L 737 169 L 753 168 L 768 164 L 800 164 L 811 167 L 828 168 L 842 173 L 851 174 L 858 178 L 865 179 L 870 183 L 877 184 L 881 188 L 884 188 L 897 195 L 917 209 L 946 236 L 971 269 L 986 298 L 987 305 L 990 309 Z M 584 87 L 624 107 L 635 116 L 640 118 L 644 125 L 637 131 L 629 134 L 628 136 L 609 147 L 604 148 L 601 152 L 577 164 L 566 172 L 551 179 L 547 183 L 542 184 L 530 193 L 516 199 L 502 209 L 499 209 L 493 214 L 480 220 L 476 224 L 470 226 L 448 240 L 445 240 L 441 244 L 435 246 L 424 254 L 408 262 L 398 271 L 393 281 L 392 611 L 390 615 L 384 614 L 379 610 L 373 608 L 369 604 L 364 603 L 352 594 L 337 587 L 335 584 L 302 567 L 300 564 L 295 562 L 291 556 L 291 290 L 295 247 L 299 238 L 300 228 L 304 221 L 305 214 L 311 200 L 314 197 L 315 191 L 319 187 L 321 181 L 325 177 L 331 165 L 335 162 L 339 155 L 352 140 L 378 117 L 399 103 L 405 101 L 409 97 L 415 96 L 420 92 L 427 91 L 432 87 L 440 86 L 451 81 L 462 80 L 467 77 L 506 74 L 544 76 L 555 80 L 566 81 L 576 86 Z" fill="#eef6ff" fill-rule="evenodd" shape-rendering="crispEdges"/>
+        </g>
+      </g>
+      <text x="38" y="76" text-anchor="middle" class="icon-label" text-rendering="geometricPrecision">ChatGPT</text>
+    </g>
+
+    <!-- 4. ANTIGRAVITY -->
+    <g transform="translate(606, 20)">
+      <rect x="0" y="0" width="76" height="60" rx="8" fill="#051020" stroke="#183154" stroke-width="1" shape-rendering="geometricPrecision"/>
+      <g class="bob4" shape-rendering="crispEdges">
+        <rect x="32" y="11" width="6" height="3" fill="#fbbc04"/>
+        <rect x="38" y="11" width="6" height="3" fill="#f97316"/>
+        <rect x="29" y="14" width="6" height="3" fill="#a3e635"/>
+        <rect x="35" y="14" width="6" height="3" fill="#f59e0b"/>
+        <rect x="41" y="14" width="6" height="3" fill="#ef4444"/>
+        <rect x="26" y="17" width="6" height="6" fill="#4ade80"/>
+        <rect x="32" y="17" width="12" height="6" fill="#3b82f6"/>
+        <rect x="44" y="17" width="6" height="6" fill="#f43f5e"/>
+        <rect x="23" y="23" width="6" height="6" fill="#2dd4bf"/>
+        <rect x="29" y="23" width="18" height="6" fill="#3b82f6"/>
+        <rect x="47" y="23" width="6" height="6" fill="#818cf8"/>
+        <rect x="23" y="29" width="9" height="6" fill="#3b82f6"/>
+        <rect x="44" y="29" width="9" height="6" fill="#3b82f6"/>
+        <rect x="20" y="35" width="9" height="6" fill="#3b82f6"/>
+        <rect x="47" y="35" width="9" height="6" fill="#3b82f6"/>
+        <rect x="17" y="41" width="6" height="3" fill="#60a5fa"/>
+        <rect x="23" y="41" width="3" height="3" fill="#3b82f6"/>
+        <rect x="50" y="41" width="3" height="3" fill="#3b82f6"/>
+        <rect x="53" y="41" width="6" height="3" fill="#60a5fa"/>
+        <rect x="14" y="44" width="6" height="3" fill="#60a5fa"/>
+        <rect x="56" y="44" width="6" height="3" fill="#60a5fa"/>
+      </g>
+      <text x="38" y="76" text-anchor="middle" class="icon-label" text-rendering="geometricPrecision">Antigravity</text>
+    </g>
+
+    <!-- 5. MY BRAIN -->
+    <g transform="translate(714, 20)">
+      <rect x="0" y="0" width="76" height="60" rx="8" fill="#051020" stroke="#183154" stroke-width="1" shape-rendering="geometricPrecision"/>
+      <g class="bob5" shape-rendering="crispEdges">
+        <rect x="28" y="8"  width="8"  height="2" fill="#8cd2ff"/>
+        <rect x="40" y="8"  width="8"  height="2" fill="#8cd2ff"/>
+        <rect x="24" y="10" width="13" height="2" fill="#8cd2ff"/>
+        <rect x="39" y="10" width="13" height="2" fill="#8cd2ff"/>
+        <rect x="20" y="12" width="17" height="4" fill="#8cd2ff"/>
+        <rect x="39" y="12" width="17" height="4" fill="#8cd2ff"/>
+        <rect x="18" y="16" width="19" height="8" fill="#8cd2ff"/>
+        <rect x="39" y="16" width="19" height="8" fill="#8cd2ff"/>
+        <rect x="20" y="24" width="17" height="2" fill="#8cd2ff"/>
+        <rect x="39" y="24" width="17" height="2" fill="#8cd2ff"/>
+        <rect x="16" y="26" width="21" height="12" fill="#8cd2ff"/>
+        <rect x="39" y="26" width="21" height="12" fill="#8cd2ff"/>
+        <rect x="18" y="38" width="19" height="4" fill="#8cd2ff"/>
+        <rect x="39" y="38" width="19" height="4" fill="#8cd2ff"/>
+        <rect x="20" y="42" width="17" height="4" fill="#8cd2ff"/>
+        <rect x="39" y="42" width="17" height="4" fill="#8cd2ff"/>
+        <rect x="24" y="46" width="12" height="2" fill="#8cd2ff"/>
+        <rect x="40" y="46" width="12" height="2" fill="#8cd2ff"/>
+        <rect x="26" y="48" width="8"  height="2" fill="#8cd2ff"/>
+        <rect x="42" y="48" width="8"  height="2" fill="#8cd2ff"/>
+
+        <rect x="26" y="10" width="10" height="2" fill="#eef6ff"/>
+        <rect x="40" y="10" width="10" height="2" fill="#eef6ff"/>
+        <rect x="22" y="12" width="15" height="4" fill="#eef6ff"/>
+        <rect x="39" y="12" width="15" height="4" fill="#eef6ff"/>
+        <rect x="20" y="16" width="17" height="8" fill="#eef6ff"/>
+        <rect x="39" y="16" width="17" height="8" fill="#eef6ff"/>
+        <rect x="22" y="24" width="15" height="2" fill="#eef6ff"/>
+        <rect x="39" y="24" width="15" height="2" fill="#eef6ff"/>
+        <rect x="18" y="26" width="19" height="10" fill="#eef6ff"/>
+        <rect x="39" y="26" width="19" height="10" fill="#eef6ff"/>
+        <rect x="20" y="36" width="17" height="6" fill="#eef6ff"/>
+        <rect x="39" y="36" width="17" height="6" fill="#eef6ff"/>
+        <rect x="22" y="42" width="14" height="4" fill="#eef6ff"/>
+        <rect x="40" y="42" width="14" height="4" fill="#eef6ff"/>
+        <rect x="26" y="46" width="8"  height="2" fill="#eef6ff"/>
+        <rect x="42" y="46" width="8"  height="2" fill="#eef6ff"/>
+
+        <rect x="28" y="14" width="2" height="6" fill="#0d2240"/>
+        <rect x="26" y="18" width="4" height="2" fill="#0d2240"/>
+        <rect x="46" y="14" width="2" height="6" fill="#0d2240"/>
+        <rect x="46" y="18" width="4" height="2" fill="#0d2240"/>
+        <rect x="20" y="20" width="4" height="2" fill="#0d2240"/>
+        <rect x="22" y="22" width="4" height="2" fill="#0d2240"/>
+        <rect x="52" y="20" width="4" height="2" fill="#0d2240"/>
+        <rect x="50" y="22" width="4" height="2" fill="#0d2240"/>
+        <rect x="30" y="24" width="5" height="2" fill="#0d2240"/>
+        <rect x="28" y="26" width="2" height="6" fill="#0d2240"/>
+        <rect x="24" y="28" width="4" height="2" fill="#0d2240"/>
+        <rect x="41" y="24" width="5" height="2" fill="#0d2240"/>
+        <rect x="46" y="26" width="2" height="6" fill="#0d2240"/>
+        <rect x="48" y="28" width="4" height="2" fill="#0d2240"/>
+        <rect x="18" y="32" width="6" height="2" fill="#0d2240"/>
+        <rect x="22" y="34" width="2" height="4" fill="#0d2240"/>
+        <rect x="52" y="32" width="6" height="2" fill="#0d2240"/>
+        <rect x="52" y="34" width="2" height="4" fill="#0d2240"/>
+        <rect x="30" y="36" width="5" height="2" fill="#0d2240"/>
+        <rect x="28" y="38" width="2" height="4" fill="#0d2240"/>
+        <rect x="24" y="42" width="6" height="2" fill="#0d2240"/>
+        <rect x="41" y="36" width="5" height="2" fill="#0d2240"/>
+        <rect x="46" y="38" width="2" height="4" fill="#0d2240"/>
+        <rect x="46" y="42" width="6" height="2" fill="#0d2240"/>
+      </g>
+      <text x="38" y="76" text-anchor="middle" class="icon-label" text-rendering="geometricPrecision">My Brain</text>
+    </g>
+
+    <rect x="16" y="10" width="808" height="100" rx="12" fill="none" stroke="url(#border-grad)" stroke-width="1.3" shape-rendering="geometricPrecision"/>
+  </g>
 </svg>
