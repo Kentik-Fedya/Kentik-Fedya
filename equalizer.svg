@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 124" width="100%" height="100%" text-rendering="geometricPrecision" shape-rendering="geometricPrecision">
+  <defs>
+    <!-- Главный диагональный градиент фона (1 в 1 с терминалом и аватаркой) -->
+    <linearGradient id="eq-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02050b"/>
+      <stop offset="45%" stop-color="#08162b"/>
+      <stop offset="80%" stop-color="#112d55"/>
+      <stop offset="100%" stop-color="#1b4982"/>
+    </linearGradient>
+
+    <!-- Градиентная рамка -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a273b"/>
+      <stop offset="50%" stop-color="#24426b"/>
+      <stop offset="100%" stop-color="#3a6ea8"/>
+    </linearGradient>
+
+    <!-- Вертикальный ледяной градиент для столбиков эквалайзера -->
+    <linearGradient id="bar-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#163888"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#e0f4ff"/>
+    </linearGradient>
+
+    <!-- Градиент для обложки трека -->
+    <linearGradient id="cover-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040b17"/>
+      <stop offset="60%" stop-color="#0d2547"/>
+      <stop offset="100%" stop-color="#215596"/>
+    </linearGradient>
+
+    <!-- Горизонтальный градиент для полосы проигрывания -->
+    <linearGradient id="progress-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e4db7"/>
+      <stop offset="70%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#d8f0ff"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif;
+      font-size: 15.5px;
+      font-weight: 600;
+      fill: #eef6ff;
+      letter-spacing: -0.2px;
+    }
+    .artist {
+      font-family: 'Monaco', 'Roboto Mono', 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 400;
+      fill: #8cd2ff;
+    }
+    .badge {
+      font-family: 'Monaco', 'Roboto Mono', 'Fira Code', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      fill: #6a9bd8;
+      letter-spacing: 1px;
+    }
+    .time {
+      font-family: 'Monaco', 'Roboto Mono', monospace;
+      font-size: 10.5px;
+      fill: #6a88ad;
+    }
+    .pulse-dot {
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    .star-pulse {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: starBeat 1.2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes starBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+    }
+  </style>
+
+  <!-- Тень окна (в точности по координатам терминала) -->
+  <rect x="11" y="3" width="818" height="116" rx="16" fill="#010409" opacity="0.14"/>
+  <rect x="13" y="4" width="814" height="112" rx="14" fill="#010409" opacity="0.28"/>
+  <rect x="15" y="5" width="810" height="108" rx="13" fill="#010409" opacity="0.45"/>
+
+  <!-- Основной корпус эквалайзера (x=16, width=808 — ровно в длину терминала) -->
+  <rect x="16" y="6" width="808" height="106" rx="12" fill="url(#eq-bg)" stroke="url(#border-grad)" stroke-width="1.4"/>
+
+  <!-- ================= ЛЕВЫЙ БЛОК: ОБЛОЖКА И ТРЕК ================= -->
+  <!-- Мини-обложка в стиле твоей аватарки -->
+  <rect x="34" y="22" width="74" height="74" rx="12" fill="url(#cover-grad)" stroke="#29528a" stroke-width="1.2"/>
+  
+  <!-- Векторная звезда с твоей аватарки внутри обложки -->
+  <g class="star-pulse">
+    <path d="M 74 34 L 77 45 L 94 38 L 72 56 L 80 54 L 87 69 L 74 67 L 67 82 L 65 69 L 51 74 L 70 59 L 61 62 L 54 48 L 68 50 Z" fill="#eef6ff"/>
+  </g>
+
+  <!-- Статус проигрывания -->
+  <circle cx="129" cy="34" r="3.5" fill="#4facfe" class="pulse-dot"/>
+  <text x="139" y="37.5" class="badge">NOW PLAYING</text>
+
+  <!-- Название и автор -->
+  <text x="125" y="61" class="title">Midnight Coding Flow</text>
+  <text x="125" y="82" class="artist">bug-dealer • Lo-Fi / Synth</text>
+
+  <!-- Вертикальный разделитель -->
+  <line x1="306" y1="24" x2="306" y2="94" stroke="#182e4d" stroke-width="1"/>
+
+  <!-- ================= ПРАВЫЙ БЛОК: ИГРАЮЩИЙ ЭКВАЛАЙЗЕР (44 СТОЛБИКА) ================= -->
+  <!-- Фоновые подложки столбиков (тусклые треки) -->
+  <g fill="#071426" opacity="0.7">
+    <rect x="324" y="24" width="5" height="58" rx="2.5"/><rect x="335" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="346" y="24" width="5" height="58" rx="2.5"/><rect x="357" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="368" y="24" width="5" height="58" rx="2.5"/><rect x="379" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="390" y="24" width="5" height="58" rx="2.5"/><rect x="401" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="412" y="24" width="5" height="58" rx="2.5"/><rect x="423" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="434" y="24" width="5" height="58" rx="2.5"/><rect x="445" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="456" y="24" width="5" height="58" rx="2.5"/><rect x="467" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="478" y="24" width="5" height="58" rx="2.5"/><rect x="489" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="500" y="24" width="5" height="58" rx="2.5"/><rect x="511" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="522" y="24" width="5" height="58" rx="2.5"/><rect x="533" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="544" y="24" width="5" height="58" rx="2.5"/><rect x="555" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="566" y="24" width="5" height="58" rx="2.5"/><rect x="577" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="588" y="24" width="5" height="58" rx="2.5"/><rect x="599" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="610" y="24" width="5" height="58" rx="2.5"/><rect x="621" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="632" y="24" width="5" height="58" rx="2.5"/><rect x="643" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="654" y="24" width="5" height="58" rx="2.5"/><rect x="665" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="676" y="24" width="5" height="58" rx="2.5"/><rect x="687" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="698" y="24" width="5" height="58" rx="2.5"/><rect x="709" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="720" y="24" width="5" height="58" rx="2.5"/><rect x="731" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="742" y="24" width="5" height="58" rx="2.5"/><rect x="753" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="764" y="24" width="5" height="58" rx="2.5"/><rect x="775" y="24" width="5" height="58" rx="2.5"/>
+    <rect x="786" y="24" width="5" height="58" rx="2.5"/><rect x="797" y="24" width="5" height="58" rx="2.5"/>
+  </g>
+
+  <!-- Анимированные столбики эквалайзера -->
+  <g fill="url(#bar-grad)">
+    <!-- 1-8: Басовая секция -->
+    <rect x="324" y="64" width="5" height="18" rx="2.5"><animate attributeName="height" values="18;52;26;58;14;42;18" dur="0.85s" repeatCount="indefinite"/><animate attributeName="y" values="64;30;56;24;68;40;64" dur="0.85s" repeatCount="indefinite"/></rect>
+    <rect x="335" y="54" width="5" height="28" rx="2.5"><animate attributeName="height" values="28;56;16;46;24;58;28" dur="0.72s" repeatCount="indefinite"/><animate attributeName="y" values="54;26;66;36;58;24;54" dur="0.72s" repeatCount="indefinite"/></rect>
+    <rect x="346" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.94s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.94s" repeatCount="indefinite"/></rect>
+    <rect x="357" y="66" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;50;20;36;56;14;16" dur="0.68s" repeatCount="indefinite"/><animate attributeName="y" values="66;32;62;46;26;68;66" dur="0.68s" repeatCount="indefinite"/></rect>
+    <rect x="368" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.81s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.81s" repeatCount="indefinite"/></rect>
+    <rect x="379" y="64" width="5" height="18" rx="2.5"><animate attributeName="height" values="18;52;26;58;14;42;18" dur="0.76s" begin="-0.3s" repeatCount="indefinite"/><animate attributeName="y" values="64;30;56;24;68;40;64" dur="0.76s" begin="-0.3s" repeatCount="indefinite"/></rect>
+    <rect x="390" y="72" width="5" height="10" rx="2.5"><animate attributeName="height" values="10;32;18;42;12;26;10" dur="0.89s" repeatCount="indefinite"/><animate attributeName="y" values="72;50;64;40;70;56;72" dur="0.89s" repeatCount="indefinite"/></rect>
+    <rect x="401" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.74s" begin="-0.2s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.74s" begin="-0.2s" repeatCount="indefinite"/></rect>
+
+    <!-- 9-20: Низкая и центральная середина -->
+    <rect x="412" y="54" width="5" height="28" rx="2.5"><animate attributeName="height" values="28;56;16;46;24;58;28" dur="0.92s" begin="-0.4s" repeatCount="indefinite"/><animate attributeName="y" values="54;26;66;36;58;24;54" dur="0.92s" begin="-0.4s" repeatCount="indefinite"/></rect>
+    <rect x="423" y="66" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;50;20;36;56;14;16" dur="0.79s" begin="-0.1s" repeatCount="indefinite"/><animate attributeName="y" values="66;32;62;46;26;68;66" dur="0.79s" begin="-0.1s" repeatCount="indefinite"/></rect>
+    <rect x="434" y="74" width="5" height="8" rx="2.5"><animate attributeName="height" values="8;26;12;34;10;22;8" dur="0.67s" repeatCount="indefinite"/><animate attributeName="y" values="74;56;70;48;72;60;74" dur="0.67s" repeatCount="indefinite"/></rect>
+    <rect x="445" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.88s" begin="-0.5s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.88s" begin="-0.5s" repeatCount="indefinite"/></rect>
+    <rect x="456" y="64" width="5" height="18" rx="2.5"><animate attributeName="height" values="18;52;26;58;14;42;18" dur="0.71s" begin="-0.6s" repeatCount="indefinite"/><animate attributeName="y" values="64;30;56;24;68;40;64" dur="0.71s" begin="-0.6s" repeatCount="indefinite"/></rect>
+    <rect x="467" y="54" width="5" height="28" rx="2.5"><animate attributeName="height" values="28;56;16;46;24;58;28" dur="0.83s" begin="-0.25s" repeatCount="indefinite"/><animate attributeName="y" values="54;26;66;36;58;24;54" dur="0.83s" begin="-0.25s" repeatCount="indefinite"/></rect>
+    <rect x="478" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.69s" begin="-0.15s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.69s" begin="-0.15s" repeatCount="indefinite"/></rect>
+    <rect x="489" y="72" width="5" height="10" rx="2.5"><animate attributeName="height" values="10;32;18;42;12;26;10" dur="0.96s" repeatCount="indefinite"/><animate attributeName="y" values="72;50;64;40;70;56;72" dur="0.96s" repeatCount="indefinite"/></rect>
+    <rect x="500" y="66" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;50;20;36;56;14;16" dur="0.75s" begin="-0.35s" repeatCount="indefinite"/><animate attributeName="y" values="66;32;62;46;26;68;66" dur="0.75s" begin="-0.35s" repeatCount="indefinite"/></rect>
+    <rect x="511" y="64" width="5" height="18" rx="2.5"><animate attributeName="height" values="18;52;26;58;14;42;18" dur="0.86s" begin="-0.1s" repeatCount="indefinite"/><animate attributeName="y" values="64;30;56;24;68;40;64" dur="0.86s" begin="-0.1s" repeatCount="indefinite"/></rect>
+    <rect x="522" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.73s" begin="-0.45s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.73s" begin="-0.45s" repeatCount="indefinite"/></rect>
+    <rect x="533" y="54" width="5" height="28" rx="2.5"><animate attributeName="height" values="28;56;16;46;24;58;28" dur="0.80s" begin="-0.55s" repeatCount="indefinite"/><animate attributeName="y" values="54;26;66;36;58;24;54" dur="0.80s" begin="-0.55s" repeatCount="indefinite"/></rect>
+
+    <!-- 21-32: Вокальный и мелодический диапазон -->
+    <rect x="544" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.77s" begin="-0.2s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.77s" begin="-0.2s" repeatCount="indefinite"/></rect>
+    <rect x="555" y="72" width="5" height="10" rx="2.5"><animate attributeName="height" values="10;32;18;42;12;26;10" dur="0.66s" begin="-0.4s" repeatCount="indefinite"/><animate attributeName="y" values="72;50;64;40;70;56;72" dur="0.66s" begin="-0.4s" repeatCount="indefinite"/></rect>
+    <rect x="566" y="66" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;50;20;36;56;14;16" dur="0.91s" begin="-0.15s" repeatCount="indefinite"/><animate attributeName="y" values="66;32;62;46;26;68;66" dur="0.91s" begin="-0.15s" repeatCount="indefinite"/></rect>
+    <rect x="577" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.68s" begin="-0.3s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.68s" begin="-0.3s" repeatCount="indefinite"/></rect>
+    <rect x="588" y="64" width="5" height="18" rx="2.5"><animate attributeName="height" values="18;52;26;58;14;42;18" dur="0.84s" begin="-0.5s" repeatCount="indefinite"/><animate attributeName="y" values="64;30;56;24;68;40;64" dur="0.84s" begin="-0.5s" repeatCount="indefinite"/></rect>
+    <rect x="599" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.72s" begin="-0.1s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.72s" begin="-0.1s" repeatCount="indefinite"/></rect>
+    <rect x="610" y="74" width="5" height="8" rx="2.5"><animate attributeName="height" values="8;26;12;34;10;22;8" dur="0.87s" begin="-0.25s" repeatCount="indefinite"/><animate attributeName="y" values="74;56;70;48;72;60;74" dur="0.87s" begin="-0.25s" repeatCount="indefinite"/></rect>
+    <rect x="621" y="66" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;50;20;36;56;14;16" dur="0.78s" begin="-0.6s" repeatCount="indefinite"/><animate attributeName="y" values="66;32;62;46;26;68;66" dur="0.78s" begin="-0.6s" repeatCount="indefinite"/></rect>
+    <rect x="632" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.93s" begin="-0.2s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.93s" begin="-0.2s" repeatCount="indefinite"/></rect>
+    <rect x="643" y="54" width="5" height="28" rx="2.5"><animate attributeName="height" values="28;56;16;46;24;58;28" dur="0.70s" begin="-0.35s" repeatCount="indefinite"/><animate attributeName="y" values="54;26;66;36;58;24;54" dur="0.70s" begin="-0.35s" repeatCount="indefinite"/></rect>
+    <rect x="654" y="72" width="5" height="10" rx="2.5"><animate attributeName="height" values="10;32;18;42;12;26;10" dur="0.82s" begin="-0.15s" repeatCount="indefinite"/><animate attributeName="y" values="72;50;64;40;70;56;72" dur="0.82s" begin="-0.15s" repeatCount="indefinite"/></rect>
+    <rect x="665" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.89s" begin="-0.45s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.89s" begin="-0.45s" repeatCount="indefinite"/></rect>
+
+    <!-- 33-44: Высокие частоты (Hi-Hats & Synth Air) -->
+    <rect x="676" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.74s" begin="-0.1s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.74s" begin="-0.1s" repeatCount="indefinite"/></rect>
+    <rect x="687" y="66" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;50;20;36;56;14;16" dur="0.85s" begin="-0.5s" repeatCount="indefinite"/><animate attributeName="y" values="66;32;62;46;26;68;66" dur="0.85s" begin="-0.5s" repeatCount="indefinite"/></rect>
+    <rect x="698" y="72" width="5" height="10" rx="2.5"><animate attributeName="height" values="10;32;18;42;12;26;10" dur="0.69s" begin="-0.25s" repeatCount="indefinite"/><animate attributeName="y" values="72;50;64;40;70;56;72" dur="0.69s" begin="-0.25s" repeatCount="indefinite"/></rect>
+    <rect x="709" y="74" width="5" height="8" rx="2.5"><animate attributeName="height" values="8;26;12;34;10;22;8" dur="0.79s" begin="-0.4s" repeatCount="indefinite"/><animate attributeName="y" values="74;56;70;48;72;60;74" dur="0.79s" begin="-0.4s" repeatCount="indefinite"/></rect>
+    <rect x="720" y="60" width="5" height="22" rx="2.5"><animate attributeName="height" values="22;44;14;54;28;18;22" dur="0.81s" begin="-0.3s" repeatCount="indefinite"/><animate attributeName="y" values="60;38;68;28;54;64;60" dur="0.81s" begin="-0.3s" repeatCount="indefinite"/></rect>
+    <rect x="731" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.67s" begin="-0.15s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.67s" begin="-0.15s" repeatCount="indefinite"/></rect>
+    <rect x="742" y="72" width="5" height="10" rx="2.5"><animate attributeName="height" values="10;32;18;42;12;26;10" dur="0.90s" begin="-0.35s" repeatCount="indefinite"/><animate attributeName="y" values="72;50;64;40;70;56;72" dur="0.90s" begin="-0.35s" repeatCount="indefinite"/></rect>
+    <rect x="753" y="74" width="5" height="8" rx="2.5"><animate attributeName="height" values="8;26;12;34;10;22;8" dur="0.73s" begin="-0.2s" repeatCount="indefinite"/><animate attributeName="y" values="74;56;70;48;72;60;74" dur="0.73s" begin="-0.2s" repeatCount="indefinite"/></rect>
+    <rect x="764" y="70" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;38;22;48;16;32;12" dur="0.84s" begin="-0.5s" repeatCount="indefinite"/><animate attributeName="y" values="70;44;60;34;66;50;70" dur="0.84s" begin="-0.5s" repeatCount="indefinite"/></rect>
+    <rect x="775" y="74" width="5" height="8" rx="2.5"><animate attributeName="height" values="8;26;12;34;10;22;8" dur="0.76s" begin="-0.1s" repeatCount="indefinite"/><animate attributeName="y" values="74;56;70;48;72;60;74" dur="0.76s" begin="-0.1s" repeatCount="indefinite"/></rect>
+    <rect x="786" y="76" width="5" height="6" rx="2.5"><animate attributeName="height" values="6;20;10;28;8;16;6" dur="0.68s" begin="-0.25s" repeatCount="indefinite"/><animate attributeName="y" values="76;62;72;54;74;66;76" dur="0.68s" begin="-0.25s" repeatCount="indefinite"/></rect>
+    <rect x="797" y="76" width="5" height="6" rx="2.5"><animate attributeName="height" values="6;18;8;24;6;14;6" dur="0.82s" begin="-0.4s" repeatCount="indefinite"/><animate attributeName="y" values="76;64;74;58;76;68;76" dur="0.82s" begin="-0.4s" repeatCount="indefinite"/></rect>
+  </g>
+
+  <!-- ================= НИЖНЯЯ ШКАЛА ПРОИГРЫВАНИЯ ================= -->
+  <text x="324" y="99" class="time">02:14</text>
+  <!-- Подложка таймлайна -->
+  <rect x="364" y="94" width="396" height="4" rx="2" fill="#071426"/>
+  <!-- Заполняющаяся полоска таймлайна -->
+  <rect x="364" y="94" width="210" height="4" rx="2" fill="url(#progress-grad)">
+    <animate attributeName="width" from="180" to="340" dur="25s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Бегунок таймлайна -->
+  <circle cx="574" cy="96" r="4" fill="#eef6ff">
+    <animate attributeName="cx" from="544" to="704" dur="25s" repeatCount="indefinite"/>
+  </circle>
+  <text x="768" y="99" class="time">03:48</text>
+</svg>
