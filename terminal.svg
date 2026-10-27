@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 450" width="100%" height="100%" text-rendering="geometricPrecision" shape-rendering="geometricPrecision">
+  <defs>
+    <!-- Компактный и аккуратный символ % -->
+    <g id="pct">
+      <ellipse cx="3.0" cy="-8.2" rx="1.75" ry="2.15" fill="none" stroke="#e6e6e6" stroke-width="1.25"/>
+      <line x1="2.4" y1="-1.0" x2="8.6" y2="-10.4" stroke="#e6e6e6" stroke-width="1.25" stroke-linecap="round"/>
+      <ellipse cx="8.0" cy="-3.2" rx="1.75" ry="2.15" fill="none" stroke="#e6e6e6" stroke-width="1.25"/>
+    </g>
+
+    <!-- Жесткая обрезка по контуру окна -->
+    <clipPath id="window-clip">
+      <rect x="16" y="12" width="808" height="422" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: 'Monaco', 'Roboto Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0px;
+    }
+    .prompt {
+      font-family: 'Monaco', 'Roboto Mono', 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0px;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Segoe UI', Roboto, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .title {
+      font-family: 'Monaco', 'Roboto Mono', monospace;
+      font-size: 13px;
+      fill: #6e6e6e;
+      font-weight: 500;
+    }
+
+    .green { fill: #28fe14; }
+    .cyan  { fill: #5bc8af; }
+    .white { fill: #e6e6e6; }
+    .hobbies-blue { fill: #6998e0; }
+
+    /* Скрываем шаги до начала их очереди */
+    .step1, .out1, .step2, .out2, .step3, .out3, .step4, .out4, .step5 {
+      opacity: 0;
+    }
+
+    .step1 { animation: fadeIn 0.05s forwards 0.2s; }
+    .out1  { animation: fadeIn 0.15s forwards 1.15s; }
+
+    .step2 { animation: fadeIn 0.05s forwards 1.4s; }
+    .out2  { animation: fadeIn 0.15s forwards 2.65s; }
+
+    .step3 { animation: fadeIn 0.05s forwards 2.9s; }
+    .out3  { animation: fadeIn 0.2s forwards 4.0s; }
+
+    .step4 { animation: fadeIn 0.05s forwards 4.95s; }
+    .out4  { animation: fadeIn 0.15s forwards 5.95s; }
+
+    .step5 { animation: fadeIn 0.05s forwards 6.2s; }
+
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Ровная многослойная тень вокруг окна -->
+  <rect x="11" y="9" width="818" height="432" rx="16" fill="#000000" opacity="0.10"/>
+  <rect x="13" y="10" width="814" height="428" rx="14" fill="#000000" opacity="0.22"/>
+  <rect x="15" y="11" width="810" height="424" rx="13" fill="#000000" opacity="0.35"/>
+
+  <!-- Основной корпус терминала -->
+  <rect x="16" y="12" width="808" height="422" rx="12" fill="#000000" stroke="#242424" stroke-width="1.2"/>
+
+  <!-- Все внутренние элементы строго внутри контура окна -->
+  <g clip-path="url(#window-clip)">
+    <!-- Верхняя шапка окна (macOS) -->
+    <rect x="16" y="12" width="808" height="33" fill="#0b0b0b"/>
+    <line x1="16" y1="45" x2="824" y2="45" stroke="#1a1a1a" stroke-width="1"/>
+
+    <!-- Кнопки светофора -->
+    <circle cx="43" cy="28.5" r="5.8" fill="#ff5f56"/>
+    <circle cx="63" cy="28.5" r="5.8" fill="#ffbd2e"/>
+    <circle cx="83" cy="28.5" r="5.8" fill="#27c93f"/>
+
+    <!-- Заголовок zsh -->
+    <text x="420" y="33" text-anchor="middle" class="title">zsh</text>
+
+    <!-- ================= 1. whoami ================= -->
+    <g class="step1">
+      <text x="54" y="85" class="prompt">
+        <tspan class="green">bug-dealer:</tspan><tspan class="cyan">~</tspan>
+      </text>
+      <use href="#pct" x="172" y="85"/>
+      <text x="192" y="85" class="mono white">whoami</text>
+      <!-- Плавная печать всей первой строки целиком -->
+      <rect x="54" y="67" width="250" height="24" fill="#000000">
+        <animate attributeName="x" from="54" to="304" begin="0.2s" dur="0.8s" fill="freeze"/>
+        <animate attributeName="width" from="250" to="0" begin="0.2s" dur="0.8s" fill="freeze"/>
+      </rect>
+    </g>
+    <g class="out1">
+      <text x="54" y="113" class="mono white">Kentik-Fedya</text>
+    </g>
+
+    <!-- ================= 2. current_status.log ================= -->
+    <g class="step2">
+      <text x="54" y="152" class="prompt">
+        <tspan class="green">bug-dealer:</tspan><tspan class="cyan">~</tspan>
+      </text>
+      <use href="#pct" x="172" y="152"/>
+      <text x="192" y="152" class="mono white">cat current_status.log</text>
+      <rect x="54" y="134" width="390" height="24" fill="#000000">
+        <animate attributeName="x" from="54" to="444" begin="1.4s" dur="1.1s" fill="freeze"/>
+        <animate attributeName="width" from="390" to="0" begin="1.4s" dur="1.1s" fill="freeze"/>
+      </rect>
+    </g>
+    <g class="out2">
+      <text x="54" y="180" class="sans white">Building projects &amp; catching bugs &#128187; &#128640;</text>
+    </g>
+
+    <!-- ================= 3. ./load_skills.sh ================= -->
+    <g class="step3">
+      <text x="54" y="219" class="prompt">
+        <tspan class="green">bug-dealer:</tspan><tspan class="cyan">~</tspan>
+      </text>
+      <use href="#pct" x="172" y="219"/>
+      <text x="192" y="219" class="mono white">./load_skills.sh</text>
+      <rect x="54" y="201" width="330" height="24" fill="#000000">
+        <animate attributeName="x" from="54" to="384" begin="2.9s" dur="0.95s" fill="freeze"/>
+        <animate attributeName="width" from="330" to="0" begin="2.9s" dur="0.95s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Скиллы и полоски -->
+    <g class="out3">
+      <!-- Python -->
+      <text x="54" y="250" class="mono white">Python</text>
+      <rect x="196" y="239" width="192" height="10" rx="5" fill="#1a1a1a"/>
+      <rect x="196" y="239" width="0" height="10" rx="5" fill="#f0d849">
+        <animate attributeName="width" from="0" to="160" begin="4.1s" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+      </rect>
+
+      <!-- Ps & DaVinci -->
+      <text x="438" y="250" class="mono white">Ps &amp; DaVinci</text>
+      <rect x="570" y="239" width="192" height="10" rx="5" fill="#1a1a1a"/>
+      <rect x="570" y="239" width="0" height="10" rx="5" fill="#1b56eb">
+        <animate attributeName="width" from="0" to="150" begin="4.2s" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+      </rect>
+
+      <!-- Algorithm (красная полоска) -->
+      <text x="54" y="276" class="mono white">Algorithm</text>
+      <rect x="196" y="265" width="192" height="10" rx="5" fill="#1a1a1a"/>
+      <rect x="196" y="265" width="0" height="10" rx="5" fill="#ff3b30">
+        <animate attributeName="width" from="0" to="128" begin="4.3s" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+      </rect>
+
+      <!-- C++ (learning) -->
+      <text x="54" y="302" class="mono white">C++ (learning)</text>
+      <rect x="196" y="291" width="192" height="10" rx="5" fill="#1a1a1a"/>
+      <rect x="196" y="291" width="0" height="10" rx="5" fill="#2cc240">
+        <animate attributeName="width" from="0" to="54" begin="4.4s" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/>
+      </rect>
+    </g>
+
+    <!-- ================= 4. echo $HOBBIES ================= -->
+    <g class="step4">
+      <text x="54" y="341" class="prompt">
+        <tspan class="green">bug-dealer:</tspan><tspan class="cyan">~</tspan>
+      </text>
+      <use href="#pct" x="172" y="341"/>
+      <text x="192" y="341" class="mono white">echo $HOBBIES</text>
+      <rect x="54" y="323" width="300" height="24" fill="#000000">
+        <animate attributeName="x" from="54" to="354" begin="4.95s" dur="0.85s" fill="freeze"/>
+        <animate attributeName="width" from="300" to="0" begin="4.95s" dur="0.85s" fill="freeze"/>
+      </rect>
+    </g>
+    <g class="out4">
+      <text x="54" y="369" class="mono hobbies-blue">Gaming | Music | Coding | Chilling</text>
+    </g>
+
+    <!-- ================= 5. Финальная строка с курсором ================= -->
+    <g class="step5">
+      <text x="54" y="404" class="prompt">
+        <tspan class="green">bug-dealer:</tspan><tspan class="cyan">~</tspan>
+      </text>
+      <use href="#pct" x="172" y="404"/>
+      <rect x="54" y="386" width="136" height="24" fill="#000000">
+        <animate attributeName="x" from="54" to="190" begin="6.2s" dur="0.45s" fill="freeze"/>
+        <animate attributeName="width" from="136" to="0" begin="6.2s" dur="0.45s" fill="freeze"/>
+      </rect>
+      <rect x="194" y="390" width="2" height="16" fill="#e6e6e6" opacity="0" class="cursor">
+        <animate attributeName="opacity" from="0" to="1" begin="6.65s" dur="0.01s" fill="freeze"/>
+      </rect>
+    </g>
+  </g>
+</svg>
